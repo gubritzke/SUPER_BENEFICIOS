@@ -1,0 +1,164 @@
+#modal{
+    z-index: 999999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    overflow: auto;
+    transition: .4s;
+    visibility: hidden;
+    opacity: 0;
+}
+#modal.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal #modalContent{
+    position: absolute;
+    left: calc(50% - 300px);
+    width: 600px;
+    // background-color: #fff;
+    // padding: 1rem;
+    margin-bottom: 20px;
+    transition-delay: .8s;
+    transition: .8s;
+    top: -100vh;
+}
+#modal.active #modalContent{
+    top: 25px;
+}
+
+#modal #modalContent #modalClose{
+    position: absolute;
+    font-size: 2rem;
+    right: 0;
+    top: -50px;
+    color: #fff;
+    cursor: pointer;
+}
+#modal{
+    overflow: hidden;
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        input[type=text],
+        input[type=email],
+        select{
+            background: #FFFFFF;
+            border: 1px solid #00ACE2;
+            box-sizing: border-box;
+            border-radius: 8px;
+            height: 35px;
+            width: 45%;
+            margin-bottom: 15px;
+        }
+        button{
+            width: 100%;
+            border: none;
+            background: #00ACE2;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .ipt-check{
+            width: 100%;
+            text-align: left;
+            padding: 0 20px ;
+            input[type=checkbox]{
+                margin-bottom: 25px;
+                margin-top: 10px;
+                float: left;
+                text-align: left;
+            }
+            span{
+                margin-left: 10px;
+                margin-top: 4px;
+                display: inline-block;
+            }
+        }
+
+    }
+    .form{
+        background: #fff;
+        box-sizing: border-box;
+        .close{
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            z-index: 9;
+        }
+        .title{
+            width: 100%;
+            text-align: right;
+            float: right;
+            margin: 57px 49px 0 0;
+            line-height: 36px;
+        }
+        .infos{
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content:flex-start;
+            a{
+                margin-left: 20px;
+            }
+            p{
+                margin-top: 15px;
+                margin-bottom: 35px;
+            }
+        }
+        .car-icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            img{
+                margin-top: 55px;
+            }
+        }
+        .topoform{
+            border-bottom: 1px solid #CCCCCC;
+            img{
+                margin-bottom: 10px;
+                display: block;
+            }
+            span.cl-black{
+                font-weight: normal;
+                font-size: 16px;
+                color: #333333;
+            }
+            p{
+                font-weight: bold;
+                font-size: 24px;
+                margin-bottom: 8px;
+                span{
+                    font-weight: normal;
+                    font-size: 16px;  
+                }
+            }
+
+        }
+        form{
+            p{
+                font-size: 16px;
+                color: #333333;
+                font-weight: normal;
+                margin-top: 10px;
+            }
+            label{
+                width: 100%;
+                margin-bottom: 35px;
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+}
+ 

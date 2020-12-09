@@ -1,0 +1,139 @@
+@import '../../Styles/Mixin.scss';
+
+#home{
+    #banner{
+        margin-bottom: 0px;
+        .texto-banner{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            span{
+                line-height: 120%;
+            }
+            p{
+                line-height: 150%;
+                width: 370px;
+                margin: 18px 0 18px 0;
+            }
+            a{
+                float: left;
+            }
+        }
+        #bg-banner1{
+            position: absolute;
+            right: 43.5%;
+            top: 0px;
+        }
+        #bg-banner2{
+            position: absolute;
+            left: 44%;
+            top: 0;
+        }
+        img.cr-img{
+            margin-top: 30px;
+            margin-left: -80px;
+        }
+    }
+}
+#produtos{
+    .title{
+        margin-bottom: 70px;
+
+        #bg-banner1{
+            position: absolute;
+            left: -153px;
+            top: -45px;
+        }
+        #bg-banner2{
+            position: absolute;
+            right: -205px;
+            top: -45px;
+        }
+        h2{
+            margin-bottom: 15px;
+            display: block;
+        }
+    }
+    .box{
+        border: 1px solid #73E4EC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 25px 0 70px 0;
+        margin-bottom: 20px;
+        text-decoration: none;
+        max-width: 380px;
+        border-radius: 10px;
+        min-height: 514.31px;
+        img.img-pet{
+            margin-top: -26px;
+        }
+        a{
+            margin-top: 10px;
+            position: absolute;
+            bottom: 44px;
+        }
+        .produto{
+            margin-bottom: 15px;
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+#solicite{
+    margin-top: 180px;
+    .left-sl{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        span{
+            z-index: 6;
+            line-height: 120%;
+            margin-top: -160px;
+        }
+        p{
+            position: relative;
+            margin-top: 5px;
+        }
+        a{
+            z-index: 6;
+            margin-top: 40px;
+        }
+        .bg-slgrenn{
+            position: absolute;
+            right: -100px;
+            top: -100px;
+        }
+        .bg-pontos{
+            position: absolute;
+            left: -411px;
+            top: 160px;
+        }
+    }
+    .left-sr{
+        position: relative;
+        .image{
+            z-index: 9;
+            position: relative;
+            margin-left: -64px;
+        }
+        .bg-slyellow{
+            position: absolute;
+            left: 150px;
+            top: 15px;
+            z-index: 5;
+        }
+        .bg-green2{
+            position: absolute;
+            right: -150px;
+            bottom: 155px;
+        }
+    }
+}

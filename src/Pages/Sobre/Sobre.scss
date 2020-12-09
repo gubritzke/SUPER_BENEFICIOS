@@ -1,0 +1,61 @@
+@import '../../Styles/Mixin.scss';
+
+#sobre{
+    #banner{
+        > img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .conteudos{
+            margin-top: 300px;
+            .texts{
+                margin-top: 240px;
+                padding-right: 45px;
+                span{
+                    line-height: 120%;
+                    color: #006CBF;
+                    margin-bottom: 45px;
+                    display: block;
+                }
+                p{
+                    line-height: 150%;
+                }
+            }
+            .imgmap{
+                position: absolute;
+                left: -203px;
+                top: -107px;
+            }
+        }
+    }
+    #nosso-manifesto{
+        margin-top: 60px;
+        .box-blue{
+            padding: 45px 45px 65px 45px;
+            border-radius: 16px;
+            span{
+                font-size: 40px;
+                font-weight: bold;
+                display: flex;
+                align-items: baseline;
+                margin-bottom: 35px;
+                position: relative;
+                img{
+                    margin-right: 20px;
+                }
+                &:after{
+                    content: "";
+                    background: #FFFE06;
+                    width: 72px;
+                    height: 6px;
+                    border-radius: 8px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../Styles/Mixin.scss';
+
+#desconto{
+    background: #F5F5F5;
+    #head{
+        background: #00309e;
+        height: 110px;
+        width: 100%;
+    }
+    iframe{
+        width: 100%;
+        height: calc(100vh - 116px);
+    }
+}
