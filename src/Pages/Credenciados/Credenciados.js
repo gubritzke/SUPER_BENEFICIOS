@@ -19,7 +19,40 @@ import bgNaoPontos from '../../images/nao-pedimos/bg-pontos.svg'
 import bgNaoYellow from '../../images/nao-pedimos/bg-yellow.svg'
 import bgImage from '../../images/sobre/image-analise.png'
 
-export default function Index() {
+import Credenciados from './Credenciados.json'
+
+export default function Index(props) {
+
+    const [result, setResult] = useState([])
+    const [estados, setEstados] = useState([])
+    const [filter, setFilter] = useState({
+        uf: ""
+    })
+
+    useEffect( () => {
+
+        setResult(Credenciados);
+
+        function getEstados(){
+            var ufs= [];
+            Credenciados.map((item) => {
+                if( !ufs.includes(item['UF']) ){
+                    ufs.push(item['UF'])     
+                }
+            });
+            setEstados(ufs);
+        }
+        getEstados();
+
+    }, [props]);
+
+    function handleFilter(e){
+        filter.uf = e.target.value;
+        setFilter({...filter});
+
+        let result = Credenciados.filter((e) => e['UF'] === filter.uf);
+        setResult(result);
+    }
 
     return (
         <div id="credenciados">
@@ -38,9 +71,11 @@ export default function Index() {
                             </p>
                             <form>
                                 <label>
-                                    <select name="search">
-                                        <option value="São Paulo">São Paulo</option>
-                                        <option value="Parana">Parana</option>
+                                    <select name="uf" value={filter.uf} onChange={(e) => handleFilter(e)}>
+                                        <option value="">Todos os estados</option>
+                                        {estados.map((uf, index) => (
+                                        <option key={index} value={uf}>{uf}</option>
+                                        ))}
                                     </select>
                                 </label>
                             </form>
@@ -62,45 +97,20 @@ export default function Index() {
 
                     <div className="row boxes">
 
+                        {result.map( (item) => (
                         <div className="col-6">
                             <div className="box">
                                 <span className="font-18 cl-black f-weight-700">
-                                    Personal Funilaria e Pintura
+                                    {item['Nome Fantasia']}
                                 </span>
-                                <span className="tel font-16 cl-light-blue"><img src={iconTel} />  11 9 82720504</span>
+                                <span className="tel font-16 cl-light-blue"><img src={iconTel} />  {item['Telefone']}</span>
                                 <span className="loc font-16 cl-end-gray"><img src={iconLoc} />
-                                    Av. Recife, 178 – Bosque Agua Branca <br />
-                                    Piracicaba – São Paulo 
+                                    {item['Logradouro']}, {item['Número']} – {item['Bairro']} <br />
+                                    {item['Cidade']} – {item['UF']}
                                 </span>
                             </div>
                         </div>
-
-                        <div className="col-6">
-                            <div className="box">
-                                <span className="font-18 cl-black f-weight-700">
-                                    Personal Funilaria e Pintura
-                                </span>
-                                <span className="tel font-16 cl-light-blue"><img src={iconTel} />  11 9 82720504</span>
-                                <span className="loc font-16 cl-end-gray"><img src={iconLoc} />
-                                    Av. Recife, 178 – Bosque Agua Branca <br />
-                                    Piracicaba – São Paulo 
-                                </span>
-                            </div>
-                        </div>
-
-                        <div className="col-6">
-                            <div className="box">
-                                <span className="font-18 cl-black f-weight-700">
-                                    Personal Funilaria e Pintura
-                                </span>
-                                <span className="tel font-16 cl-light-blue"><img src={iconTel} />  11 9 82720504</span>
-                                <span className="loc font-16 cl-end-gray"><img src={iconLoc} />
-                                    Av. Recife, 178 – Bosque Agua Branca <br />
-                                    Piracicaba – São Paulo 
-                                </span>
-                            </div>
-                        </div>
-
+                        ))}
                     </div>
                 </div>
             </div>
