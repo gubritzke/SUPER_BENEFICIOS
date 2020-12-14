@@ -76,7 +76,7 @@ export default function Index() {
                                     <span className="produto cl-gray font-28">Super Auto | <span className="cl-blue font-28">Motos</span></span>
                                     <span className="cl-gray font-16">Planos a partir de</span>
                                     <span className="cl-blue font-32 f-weight-700">R$ 39,90<span className="cl-gray font-16 f-weight-400">/mensais</span></span>
-                                    <Link className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
+                                    <Link to="form-auto" className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
                                 </Link>
                             </ScrollAnimation>
 
@@ -86,7 +86,7 @@ export default function Index() {
                                     <span className="produto cl-gray font-28">Super Auto | <span className="cl-blue font-28">Carros</span></span>
                                     <span className="cl-gray font-16">Planos a partir de</span>
                                     <span className="cl-blue font-32 f-weight-700">R$ 39,90<span className="cl-gray font-16 f-weight-400">/mensais</span></span>
-                                    <Link className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
+                                    <Link to="form-auto" className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
                                 </Link>
                             </ScrollAnimation>
 
@@ -96,7 +96,7 @@ export default function Index() {
                                     <span className="produto cl-gray font-28">Super Auto | <span className="cl-blue font-28">SUvs</span></span>
                                     <span className="cl-gray font-16">Planos a partir de</span>
                                     <span className="cl-blue font-32 f-weight-700">R$ 44,90<span className="cl-gray font-16 f-weight-400">/mensais</span></span>
-                                    <Link className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
+                                    <Link to="form-auto" className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
                                 </Link>
                             </ScrollAnimation>
 
@@ -106,7 +106,7 @@ export default function Index() {
                                     <span className="produto cl-gray font-28">Super <span className="cl-blue font-28">Saúde</span></span>
                                     <span className="cl-gray font-16">Planos a partir de</span>
                                     <span className="cl-blue font-32 f-weight-700">R$ 23,90<span className="cl-gray font-16 f-weight-400">/mensais</span></span>
-                                    <Link className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
+                                    <Link to="form-saude" className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
                                 </Link>
                             </ScrollAnimation>
 
@@ -116,7 +116,7 @@ export default function Index() {
                                     <span className="produto cl-gray font-28">Super <span className="cl-blue font-28">Casa</span></span>
                                     <span className="cl-gray font-18 txt-pc" align="center">Seu lar merece segurança<br />
 e muitas vantagens!</span>
-                                    <Link className="bg-light-blue cl-white bt font-18">Saiba mais <img className="icon" src={ArrowYellow} /></Link>
+                                    <Link  to="form-casa" className="bg-light-blue cl-white bt font-18">Saiba mais <img className="icon" src={ArrowYellow} /></Link>
                                  </Link>
                             </ScrollAnimation>
 
@@ -126,7 +126,7 @@ e muitas vantagens!</span>
                                     <span className="produto cl-gray font-28">Super <span className="cl-blue font-28">Pet</span></span>
                                     <span className="cl-gray font-18 txt-pc" align="center">Seu amigo merece os<br />
 melhores benefícios!</span>
-                                    <Link className="bg-light-blue cl-white bt font-18">Saiba mais <img className="icon" src={ArrowYellow} /></Link>
+                                    <Link  to="form-pet" className="bg-light-blue cl-white bt font-18">Saiba mais <img className="icon" src={ArrowYellow} /></Link>
                                 </Link>
                             </ScrollAnimation>
                         </div>
