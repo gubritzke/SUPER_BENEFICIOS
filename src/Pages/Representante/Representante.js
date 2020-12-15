@@ -6,141 +6,183 @@ import Modal from '../../Components/Modal/index';
 
 import './Representante.scss';
 
-import image from '../../images/credenciados/image.png'
-import BgimageB from '../../images/credenciados/bg.svg'
-import logosa from '../../images/credenciados/logo.png'
-import iconTel from '../../images/credenciados/icon-tel.svg'
-import iconLoc from '../../images/credenciados/icon-loc.svg'
+import BgBanner from '../../images/representantes/banner.svg'
+import ImageBanner1 from '../../images/representantes/image-banner-1.png'
+import ImageBanner2 from '../../images/representantes/image-banner-2.svg'
 
-import ArrowBlue from '../../images/icon/arrow-blue.svg'
-import bgNaoGreen from '../../images/nao-pedimos/bg-green.svg'
-import bgNaoGreen2 from '../../images/nao-pedimos/bg-green2.svg'
-import bgNaoPontos from '../../images/nao-pedimos/bg-pontos.svg'
-import bgNaoYellow from '../../images/nao-pedimos/bg-yellow.svg'
-import bgImage from '../../images/sobre/image-analise.png'
+import ImageNotice1 from '../../images/representantes/nt-1.png'
+import ImageNotice2 from '../../images/representantes/nt-2.png'
+import ImageNotice3 from '../../images/representantes/nt-3.png'
+
+import ArrowYellow from '../../images/icon/arrow-yellow.svg'
+
+import Icon1 from '../../images/representantes/icon-1.png'
+import Icon2 from '../../images/representantes/icon-2.png'
+import Icon3 from '../../images/representantes/icon-3.png'
+import Icon4 from '../../images/representantes/icon-4.png'
+import Icon5 from '../../images/representantes/icon-5.png'
+import Icon6 from '../../images/representantes/icon-6.png'
+
+
+import ArrowDown from '../../images/representantes/arrow-down.svg'
+
+
 
 export default function Index() {
 
     return (
-        <div id="credenciados">
-            <div id="head"></div>
-            <div id="search">
+        <div id="Representante">
+            <div id="banner">
+                <img src={BgBanner} className="animated fadeInDown" />
                 <div className="content">
-                    <div className="row">
-                        <div className="col-6 text">
-                            <img src={logosa} />
-                            <span className="cl-black font-32 f-weight-700">
-                                Rede de oficinas e <br />
-                                Parceiros Credenciados
-                            </span>
-                            <p className="cl-black font-16">
-                                Selecione sua localidade e conheça nossa rede de conveniados.
-                            </p>
-                            <form>
-                                <label>
-                                    <select name="search">
-                                        <option value="São Paulo">São Paulo</option>
-                                        <option value="Parana">Parana</option>
-                                    </select>
-                                </label>
-                            </form>
+                    <div className="row conteudos">
+                        <div className="col-6 image animated fadeIn">
+                            <img src={ImageBanner1} />
                         </div>
-                        <div className="col-6 images">
-                            <img className="image" src={image} />
-                            <img className="bg" src={BgimageB} />
+                        
+                        <div className="col-6 ">
+                            <div className="texts">
+                                <span className="cl-light-blue font-48 f-weight-700">
+                                    Torne-se um <br />
+                                    Super Consultor!
+                                </span>
+                                <p className="cl-gray font-24 f-weight-700">É a oportunidade de gerar um faturamento expressivo vendendo um serviço essencial em nosso país!</p>
+                                <p className="cl-gray font-16">A Super disponibiliza planos para quem possui vans, motos convencionais e de baixa cilindrada, carros com sinistro, utilitários e muito mais.</p>
+                                <img src={ImageBanner2} />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="results">
+
+            <div id="notice">
                 <div className="content">
                     <div className="row">
-                        <div className="col-12">
-                            <p className="font-16 cl-black res">Resultados encontrados:</p>
-                        </div>
-                    </div>
-
-                    <div className="row boxes">
-
-                        <div className="col-6">
+                        <div className="col-4">
                             <div className="box">
-                                <span className="font-18 cl-black f-weight-700">
-                                    Personal Funilaria e Pintura
-                                </span>
-                                <span className="tel font-16 cl-light-blue"><img src={iconTel} />  11 9 82720504</span>
-                                <span className="loc font-16 cl-end-gray"><img src={iconLoc} />
-                                    Av. Recife, 178 – Bosque Agua Branca <br />
-                                    Piracicaba – São Paulo 
-                                </span>
+                                <img src={ImageNotice1} />
+                                <div className="texts">
+                                    <span className="cl-light-blue f-weight-700 font-32">Renda Extra</span>
+                                    <p className="cl-gray font-16">A oportunidade de gerar um <b>faturamento expressivo</b> oferecendo um <b>serviço de qualidade.</b></p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="col-6">
+                        <div className="col-4">
                             <div className="box">
-                                <span className="font-18 cl-black f-weight-700">
-                                    Personal Funilaria e Pintura
-                                </span>
-                                <span className="tel font-16 cl-light-blue"><img src={iconTel} />  11 9 82720504</span>
-                                <span className="loc font-16 cl-end-gray"><img src={iconLoc} />
-                                    Av. Recife, 178 – Bosque Agua Branca <br />
-                                    Piracicaba – São Paulo 
-                                </span>
+                                <img src={ImageNotice2} />
+                                <div className="texts">
+                                    <span className="cl-light-blue f-weight-700 font-32">Liberdade Financeira</span>
+                                    <p className="cl-gray font-16">Está difícil para pagar as contas? <br /><b>A sua tão sonhada liberdade financeira começa aqui!</b> Entre em contato.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="col-6">
+                        <div className="col-4">
                             <div className="box">
-                                <span className="font-18 cl-black f-weight-700">
-                                    Personal Funilaria e Pintura
-                                </span>
-                                <span className="tel font-16 cl-light-blue"><img src={iconTel} />  11 9 82720504</span>
-                                <span className="loc font-16 cl-end-gray"><img src={iconLoc} />
-                                    Av. Recife, 178 – Bosque Agua Branca <br />
-                                    Piracicaba – São Paulo 
-                                </span>
+                                <img src={ImageNotice3} />
+                                <div className="texts">
+                                    <span className="cl-light-blue f-weight-700 font-32">Negócio Próprio</span>
+                                    <p className="cl-gray font-16">Aumentar a sua renda é possível, conheça os benefícios de se tornar um representante Super.</p>
+                                </div>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div id="solicite">
-                <div className="content">
-                    <div className="row">
-                        <div className="col-4 left-sl">
-                            <ScrollAnimation animateOnce animateIn='fadeIn'>
-                                <img className="bg-slgrenn" src={bgNaoGreen} />
-                            </ScrollAnimation>
-                            <ScrollAnimation animateOnce delay={250} animateIn='fadeIn'>
-                                <img className="bg-pontos" src={bgNaoPontos} />
-                            </ScrollAnimation>
-                            
-                            <span className="cl-white font-56 f-weight-700">
-                            Sem análise<br />
-                            de perfil, Sem <br />
-                            complicação.
-                            </span>
-                            <p className="cl-white font-24 f-weight-700">
-                            Queremos simplificar sua vida. <br />
-                            Vem com a gente!
-                            </p>
-                            <Link className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
-                        </div>
-                        <div className="col-8 left-sr">
-                            <ScrollAnimation animateOnce animateIn='fadeIn'>
-                                <img className="image" src={bgImage} />
-                                <img className="bg-slyellow" src={bgNaoYellow} />
-                            </ScrollAnimation>
-                            <ScrollAnimation animateOnce animateIn='fadeInRight'>
-                                <img className="bg-green2" src={bgNaoGreen2} />
-                            </ScrollAnimation>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div id="video">
+                <div className="content">
+                    <div className="row">
+                        <div className="col-8">
+                            <div className="video-box">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HSU5DTvMq0w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div className="col-4 texts">
+                            <span className="cl-balck font-32 f-weight-700">Quer ter um Super Faturamento extra?</span>
+                            <p className="cl-black font-18">É a sua <span className="cl-light-blue">Liberdade Financeira</span> a partir de um serviço que atinge cerca de <b>75% da frota nacional automotiva.</b></p>
+                            <Link to="" className="cl-blue border-blue font-16 bt">Seja um representante <img src={ArrowDown} /></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="icons">
+                <div className="content">
+                    <div className="row">
+                        <div className="col-4">
+                            <div className="box">
+                                <img src={Icon1} />
+                            </div>
+                        </div>
+
+                        <div className="col-4">
+                            <div className="box">
+                                <img src={Icon2} />
+                            </div>
+                        </div>
+
+                        <div className="col-4">
+                            <div className="box">
+                                <img src={Icon3} />
+                            </div>
+                        </div>
+
+                        <div className="col-4">
+                            <div className="box">
+                                <img src={Icon4} />
+                            </div>
+                        </div>
+
+                        <div className="col-4">
+                            <div className="box">
+                                <img src={Icon5} />
+                            </div>
+                        </div>
+
+                        <div className="col-4">
+                            <div className="box">
+                                <img src={Icon6} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contato">
+                <div className="content">
+                    <div className="row">
+                        <div className="box col-12 bg-light-blue row no-gutters">
+                            <div className="col-5 texts">
+                                <span className="font-32 cl-white f-weight-700">Cadastre agora mesmo e <br />seja um <span className="cl-yellow">Super Consultor!</span></span>
+                                <p className="font-16 cl-white">Nunca foi tão fácil ter seu próprio negócio.Faça agora <br />mesmo o seu cadastro e aumente as suas chances de <br />faturamento. Seja Super!</p>
+                            </div>
+                            <div className="col-7">
+                                <form method="post" className="row">
+                                    <label className="col-12">
+                                        <input name="nome" value="" placeholder="Nome Completo" />
+                                    </label>
+                                    <label className="col-6">
+                                        <input name="nome" value="" placeholder="Email" />
+                                    </label>
+                                    <label className="col-6">
+                                        <input name="nome" value="" placeholder="Telefone" />
+                                    </label>
+                                    <label className="col-12">
+                                        <textarea name="nome" value="" placeholder="Mensagem"></textarea>
+                                    </label>
+                                    
+                                    <label className="col-12" align="right">
+                                        <button type="submit" className="bt cl-white">Cadastrar <img src={ArrowYellow} /></button>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 }

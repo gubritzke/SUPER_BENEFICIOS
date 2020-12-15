@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import './Form.scss';
+import { FiLoader } from 'react-icons/fi';
+import swal from 'sweetalert';
+
+
+import { api } from '../../Api/app'
 
 import ArrowYellow from '../../images/icon/arrow-yellow.svg'
 
@@ -18,9 +23,56 @@ import IconS9 from '../../images/forms/Icons-9.svg'
 import Image from '../../images/forms/image-casa.png'
 import Logo from '../../images/forms/logo-vida.svg'
 
+import InputMask from 'react-input-mask';
 
 
 export default function Index() {
+
+    const [stepLoad, setstepLoad] = useState(false)
+    const [camposFormulario, setCamposFormularios] = useState({
+        nome: '',
+        telefone: '',
+        email: '',
+        mensagem: '',
+    })
+
+    async function handleSend(event)
+    {
+
+        event.preventDefault()
+
+        var data = camposFormulario
+
+        setstepLoad(true)
+
+             var response =  await api.post('/form-casa', data)
+
+            if  ( response.data.error == true){
+                alert( response.data.message )
+            }  else {
+                swal("Enviado com sucesso!");
+            }
+
+            setTimeout(function(){
+                setstepLoad(false)
+            })
+
+        
+
+        console.log( response )
+
+    }
+
+    function changeInputMult(e)
+    {
+
+        var meusdados = camposFormulario
+        meusdados[e.target.name] = e.target.value
+        setCamposFormularios({...meusdados})
+
+        console.log( meusdados )
+
+    }
 
     return (
         <div id="credenciados">
@@ -55,28 +107,28 @@ export default function Index() {
                                     </p>
                                 </div>
                                 <div className="col-12 row no-gutters">
-                                    <form className="col-12 row no-gutters">
+                                    <form className="col-12 row no-gutters" method="post" onSubmit={handleSend}>
                                         <div className="col-12">
-                                            <input type="text" maxlength="7" name="nome" placeholder="Nome completo"/>
+                                            <input type="text" value={camposFormulario.nome} onChange={(e) => changeInputMult(e)} name="nome" placeholder="Nome completo"/>
                                         </div>
 
                                         <div className="col-12">
-                                        <input type="text" name="telefone" placeholder="Telefone" />
+                                        <InputMask mask="(99) 99999-9999"  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
                                         </div>
                                         
                                         <div className="col-12" align="right">
-                                            <input type="text" name="email" placeholder="E-mail" />
+                                            <input type="text" name="email" value={camposFormulario.email} onChange={(e) => changeInputMult(e)} placeholder="E-mail" />
                                         </div>
 
                                         <div className="col-12">
-                                            <textarea name="text">
+                                            <textarea value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)} name="mensagem">
                                                 Mensagem
                                             </textarea>
                                         </div>
                                         
                                         
                                         <div className="ipt-check col-12">
-                                            <button type="submit">Quero mais informações <img src={ArrowYellow} /></button>
+                                            <button type="submit">{stepLoad === true ? <FiLoader /> : "Quero mais informações"} <img src={ArrowYellow} /> </button>
                                         </div>
                                     </form>
                                 </div>

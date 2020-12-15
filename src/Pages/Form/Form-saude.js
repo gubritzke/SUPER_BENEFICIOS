@@ -9,6 +9,12 @@ import './Form.scss';
 
 import ArrowYellow from '../../images/icon/arrow-yellow.svg'
 
+import { FiLoader } from 'react-icons/fi';
+import swal from 'sweetalert';
+
+
+import { api } from '../../Api/app'
+
 import IconS1 from '../../images/forms/Icons-1.svg'
 import IconS2 from '../../images/forms/Icons-2.svg'
 import IconS3 from '../../images/forms/Icons-3.svg'
@@ -21,9 +27,58 @@ import IconS9 from '../../images/forms/Icons-9.svg'
 import Image from '../../images/forms/image-saude.png'
 import Logo from '../../images/forms/logo-vida.svg'
 
+import InputMask from 'react-input-mask';
 
 
 export default function Index() {
+
+    const [stepLoad, setstepLoad] = useState(false)
+    const [camposFormulario, setCamposFormularios] = useState({
+        nome: '',
+        telefone: '',
+        email: '',
+        plano: '',
+        mensagem: '',
+    })
+
+    async function handleSend(event)
+    {
+
+        event.preventDefault()
+
+        var data = camposFormulario
+
+        setstepLoad(true)
+
+             var response =  await api.post('/form-saude', data)
+
+            if  ( response.data.error == true){
+                alert( response.data.message )
+            }  else {
+                swal("Enviado com sucesso!");
+            }
+
+            setTimeout(function(){
+                setstepLoad(false)
+            })
+
+        
+
+        console.log( response )
+
+    }
+
+    function changeInputMult(e)
+    {
+
+        var meusdados = camposFormulario
+        meusdados[e.target.name] = e.target.value
+        setCamposFormularios({...meusdados})
+
+        console.log( meusdados )
+
+    }
+
 
     return (
         <div id="credenciados">
@@ -62,9 +117,9 @@ export default function Index() {
                                     </p>
                                 </div>
                                 <div className="col-12 row no-gutters">
-                                    <form className="col-12 row no-gutters">
+                                    <form className="col-12 row no-gutters" onSubmit={handleSend} method="post">
                                         <div className="col-12">
-                                            <select name="plano">
+                                            <select name="plano" onChange={(e) => changeInputMult(e)} >
                                                 <option value="">Plano</option>
                                                 <option value="Super Essencial | 23,90/mensais">Super Essencial | 23,90/mensais</option>
                                                 <option value="Super Saude+ | 29,90/mensais">Super Saude+ | 29,90/mensais</option>
@@ -72,26 +127,26 @@ export default function Index() {
                                             </select>
                                         </div>
                                         <div className="col-12">
-                                            <input type="text" maxlength="7" name="nome" placeholder="Nome completo"/>
+                                            <input type="text" value={camposFormulario.nome} onChange={(e) => changeInputMult(e)}  name="nome" placeholder="Nome completo"/>
                                         </div>
 
                                         <div className="col-6">
-                                        <input type="text" name="telefone" placeholder="Telefone" />
+                                            <InputMask mask="(99) 99999-9999"  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
                                         </div>
                                         
                                         <div className="col-6" align="right">
-                                            <input type="text" name="email" placeholder="E-mail" />
+                                            <input type="text" value={camposFormulario.email} onChange={(e) => changeInputMult(e)}  name="email" placeholder="E-mail" />
                                         </div>
 
                                         <div className="col-12">
-                                            <textarea name="text">
+                                            <textarea value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)}  name="mensagem">
                                                 Mensagem
                                             </textarea>
                                         </div>
                                         
                                         
                                         <div className="ipt-check col-12">
-                                            <button type="submit">Quero mais informações <img src={ArrowYellow} /></button>
+                                            <button type="submit">{stepLoad === true ? <FiLoader /> : "Quero mais informações"} <img src={ArrowYellow} /> </button>
                                         </div>
                                     </form>
                                 </div>

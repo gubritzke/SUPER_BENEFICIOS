@@ -34,8 +34,20 @@ import bgImage from '../../images/nao-pedimos/imagem.png'
 import ModalMoto from '../../images/produtos/modal/produtos.png'
 import IconCar from '../../images/produtos/modal/icon-car.png'
 
+import ModalImage from '../../images/modal/image-modal.png'
+
 export default function Index() {
+
     const [modalActive, setModalActive] = useState(false);
+
+    useEffect(()=>{
+        if(!window.localStorage.getItem('modal')){
+            setModalActive(true)
+            window.localStorage.setItem('modal', true)
+        }
+    },[])
+
+    const [modalFtActive, setModalFtActive] = useState(false);
 
     return (
         <div id="home">
@@ -151,7 +163,7 @@ melhores benefícios!</span>
                                 análise<br />
                                 de perfil.
                             </span>
-                            <Link className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
+                            <Link onClick={(e) => setModalFtActive(true)} className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
                         </div>
                         <div className="col-8 left-sr">
                             <ScrollAnimation animateOnce animateIn='fadeIn'>
@@ -167,57 +179,30 @@ melhores benefícios!</span>
             </div>
 
             <Modal modalActive={modalActive}>
-                <div className="row form no-gutters">
-                    <div className="col-12 row no-gutters">
-                        <button onClick={(e) => setModalActive(false)} className="close">X</button>
-                        <div className="col-7">
-                            <img src={ModalMoto} />
-                        </div>
-                        <div className="col-5 ">
-                            <span className="font-32 cl-gray title">
-                                Super Auto<br />
-                                <span className="cl-blue f-weight-700">
-                                    Motos
-                                </span>
-                            </span>
-                            <div className="car-icons">
-                                <img src={IconCar}></img>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-6 row no-gutters infos">
-                        <span className="cl-gray font-16">Planos a partir de</span>
-                        <span className="cl-blue font-32 f-weight-700">R$ 39,90<span className="cl-gray font-16 f-weight-400">/mensais</span></span>
-                    </div>
-                    <div className="col-6 row no-gutters infos">
-                        <Link className="bg-light-blue cl-white bt font-18">Fazer Simulação <img className="icon" src={ArrowYellow} /></Link>
-                    </div>
-                    <div className="col-12 row no-gutters infos">
-                        <p>
-                            Temos vários planos para você ficar protegido e tranquilo.<br />
-                            <b>Não fazemos análise de Perfil.</b>
-                            </p>
-                    </div>
-                    <div className="col-12 row no-gutters">
-                        <form className="col-12">
-                        <input type="text" maxlength="7" id="pwrVhclPlts"/>
-                        <select id="pwrVhclTp"></select>
-                        <select id="pwrVhclBrnd"><option>Marca</option></select>
-                        <select id="pwrVhclVrsn"><option>Ano Modelo</option></select>
-                        <select id="pwrVhclMdl"><option>Modelo</option></select>
-                        <input type="text" id="pwrAssocNm" maxlength="256" />
-                        <input type="email" id="pwrAssocEml" maxlength="128" />
-                        <input type="text" id="pwrAssocPhn" maxlength="31" />
-                        <select id="pwrStt"></select>
-                        <select id="pwrCty" data-placeholder="Selecione a cidade"></select>
-                        <div className="ipt-check">
-                        <input type="checkbox"  name="" id="pwrWorkVhcl" /> <span>Seu veículo é táxi ou utilizado em aplicativo?</span>
-                        </div>
-                        <button id="pwrActnSnd">Receber cota&ccedil;&atilde;o</button>
-                        </form>
+                <div id="modal-ini" className="bg-blue">
+                    <button onClick={(e) => setModalActive(false)} className="fechar"></button>
+                    <img src={ModalImage} />
+                    <div className="buttons">
+                        <Link to="/form-auto" className="font-16 cl-white border-white bt">Super Auto</Link>
+                        <Link to="/form-saude" className="font-16 cl-white border-white bt">Super Vida</Link>
+                        <Link to="/form-casa" className="font-16 cl-white border-white bt">Super Casa</Link>
+                        <Link to="/form-pet" className="font-16 cl-white border-white bt">Super Pet</Link>
                     </div>
                 </div>
             </Modal>
+            
+            <Modal modalActive={modalFtActive}>
+            <div id="modal-ini" className="bg-blue">
+                <button onClick={(e) => setModalFtActive(false)} className="fechar"></button>
+                <img src={ModalImage} />
+                <div className="buttons">
+                    <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
+                    <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
+                    <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                    <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                </div>
+            </div>
+        </Modal>
 
         </div>
     );

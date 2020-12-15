@@ -19,10 +19,13 @@ import bgNaoPontos from '../../images/nao-pedimos/bg-pontos.svg'
 import bgNaoYellow from '../../images/nao-pedimos/bg-yellow.svg'
 import bgImage from '../../images/sobre/image-analise.png'
 
+import ModalImage from '../../images/modal/image-modal.png'
+
 import Credenciados from './Credenciados.json'
 
 export default function Index(props) {
 
+    const [modalFtActive, setModalFtActive] = useState(false);
     const [result, setResult] = useState([])
     const [estados, setEstados] = useState([])
     const [filter, setFilter] = useState({
@@ -137,7 +140,7 @@ export default function Index(props) {
                             Queremos simplificar sua vida. <br />
                             Vem com a gente!
                             </p>
-                            <Link className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
+                            <Link onClick={(e) => setModalFtActive(true)} className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
                         </div>
                         <div className="col-8 left-sr">
                             <ScrollAnimation animateOnce animateIn='fadeIn'>
@@ -151,6 +154,20 @@ export default function Index(props) {
                     </div>
                 </div>
             </div>
+
+            <Modal modalActive={modalFtActive}>
+            <div id="modal-ini" className="bg-blue">
+                <button onClick={(e) => setModalFtActive(false)} className="fechar"></button>
+                <img src={ModalImage} />
+                <div className="buttons">
+                    <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
+                    <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
+                    <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                    <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                </div>
+            </div>
+        </Modal>
+
         </div>
     );
 }

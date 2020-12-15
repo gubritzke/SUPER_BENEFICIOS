@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
 
 import LogoFooter from '../../images/logo/logo-footer.svg'
@@ -15,10 +16,16 @@ import Facebook from '../../images/icon/facebook.svg'
 import Star from '../../images/sobre/star.svg'
 import Whatsimage from '../../images/sobre/whats.svg'
 
+import Modal from '../Modal/index';
+
+import ModalImage from '../../images/modal/image-modal.png'
+
 
 export default function Footer(){
 
     const [ftNone,  setftNone] = useState('active')
+
+    const [modalFtActive, setModalFtActive] = useState(false);
 
     return(
         <footer id="footer" className={window.location.href == window.location.origin + "/desconto" ? 'active' : ' '} >
@@ -32,25 +39,25 @@ export default function Footer(){
                             <div className="uls-menus">
                                 <ul className="cl-white font-16 ">
                                     <li>
-                                        <Link to="javascript:;">Sobre</Link>
+                                        <Link to="/sobre">Sobre</Link>
                                     </li>
                                     <li>
-                                        <Link to="javascript:;">Planos</Link>
+                                        <Link to="/super-auto">Planos</Link>
                                     </li>
                                     <li>
-                                        <Link to="javascript:;">Política de Cookies e Privacidade</Link>
+                                        <Link to="/">Política de Cookies e Privacidade</Link>
                                     </li>
                                 </ul>
 
                                 <ul className="cl-white font-16 ">
                                     <li>
-                                        <Link to="javascript:;">Descontos</Link>
+                                        <Link to="/desconto">Descontos</Link>
                                     </li>
                                     <li>
-                                        <Link to="javascript:;">Área do <b>consultor</b></Link>
+                                        <a href="https://app.powercrm.com.br/login" target="_black">Área do <b>consultor</b></a>
                                     </li>
                                     <li>
-                                        <Link to="javascript:;">Área do <b>associado</b></Link>
+                                        <Link to="">Área do <b>associado</b></Link>
                                     </li>
                                 </ul>
 
@@ -88,7 +95,7 @@ export default function Footer(){
                             <p className="font-14 cl-black">© <b>2020 Super Benefícios.</b> Todos os direitos reservados</p>
                         </div>
                         <div className="col-md-12 col-lg-6" align="right">
-                            <p className="prod font-14 cl-black">Produzido por <Link to="javascript:;" className="f-wheight-600 cl-black"> Tropa Digital </Link> e <Link className="f-wheight-600 cl-black" to="">SOMO Collab</Link> </p>
+                            <p className="prod font-14 cl-black">Produzido por <a href="https://tropa.digital" target="_blank" className="f-wheight-600 cl-black"> Tropa Digital </a> e <a href="https://somocollab.com.br" className="f-wheight-600 cl-black" to="">SOMO Collab</a> </p>
                         </div>
                     </div>
                 </div>
@@ -101,12 +108,28 @@ export default function Footer(){
                         </div>
 
                         <div className="col-5 buttons">
-                            <Link className="cl-white bg-blue bt" to=""><img src={Star} />Faça sua cotação online</Link> 
+                            <Link onClick={(e) => setModalFtActive(true)} className="cl-white bg-blue bt" ><img src={Star} />Faça sua cotação online</Link> 
                             <Link className="cl-blue bt border-blue"><img src={Whatsimage} /> Fale conosco</Link>
                         </div>
                     </div>
                 </div>
             </div>
+
+        <Modal modalActive={modalFtActive}>
+            <div id="modal-ini" className="bg-blue">
+                <button onClick={(e) => setModalFtActive(false)} className="fechar"></button>
+                <img src={ModalImage} />
+                <div className="buttons">
+                    <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
+                    <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
+                    <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                    <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                </div>
+            </div>
+        </Modal>
+
         </footer>
+
+
     );
 }

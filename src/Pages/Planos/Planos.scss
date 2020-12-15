@@ -5,7 +5,7 @@
         > img{
             position: absolute;
             top: 0;
-            left: 0;
+            left: calc(50% - 960px);
             width: 100%;
             max-width: 1920px;
             min-width: 1920px;
@@ -50,6 +50,261 @@
                     position: absolute;
                     left: 0;
                     bottom: -14px;
+                }
+            }
+        }
+    }
+}
+
+#super-vida{
+    #banner{
+        > img{
+            position: absolute;
+            top: 0;
+            left: calc(50% - 960px);
+            width: 100%;
+            max-width: 1920px;
+            min-width: 1920px;
+        }
+        .conteudos{
+            .img{
+                margin-top: 300px;
+                margin-bottom: 80px;
+            }
+        }
+    }
+    #vantauto{
+        margin-top: 85px;
+        .image{
+            display: flex;
+            align-items: center;
+                justify-content: center;
+                margin-bottom: 35px;
+        }
+    }
+    #nosso-manifesto{
+        margin-top: 60px;
+        .box-blue{
+            padding: 45px 45px 65px 45px;
+            border-radius: 16px;
+            span{
+                font-size: 40px;
+                font-weight: bold;
+                display: flex;
+                align-items: baseline;
+                margin-bottom: 35px;
+                position: relative;
+                img{
+                    margin-right: 20px;
+                }
+                &:after{
+                    content: "";
+                    background: #FFFE06;
+                    width: 72px;
+                    height: 6px;
+                    border-radius: 8px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -14px;
+                }
+            }
+        }
+    }
+    #planos {
+        margin: 30px 0;
+        padding: 0 140px;
+    
+        .points{
+            position: absolute;
+            left: -63px;
+            bottom: -112px;
+        }
+        .bg-p-blue1{
+            background: #75B7F0;
+        }
+        .bg-p-blue2{
+            background: #00ACE2;
+        }
+        .bg-p-blue3{
+            background: #00309E;
+        }
+        
+        .obs-planos {
+            position: absolute;
+            right: 0;
+            bottom: -85px;
+        }
+    
+        .title {
+            margin-bottom: 65px;
+        }
+    
+        .bx1{
+            background: #FFFFFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid #75B7F0;
+        }
+        .bx2{
+            background: #FFFFFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid #00ACE2;
+        }
+        .bx3{
+            background: #FFFFFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid #00309E;
+        }
+        .box {
+            border-radius: 10px;
+            .topo {
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 25px;
+            }
+    
+            .list {
+                padding: 0 25px;
+    
+                span {
+                    display: flex;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 15px;
+    
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+    
+            .footer {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+    
+                p {
+                    margin: 20px 0 8px 0;
+                }
+    
+                span.valor {
+                    margin-bottom: 15px;
+                }
+    
+                a {
+                    margin-bottom: 55px;
+                }
+            }
+        }
+    }
+    #qualdiade{
+        margin-top: 75px;
+        .cts{
+            margin-top: -45px;
+        }
+        .texts{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            .box{
+                text-align: center;
+                background: #75B7F0;
+                border-radius: 118px;
+                width: 542px;
+                height: 144px;  
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            > p{
+                margin-top: 45px;
+            }
+        }
+    }
+    #vantavida{
+        margin-top: -45px;
+        .title{
+            margin-bottom: 75px;
+            display: block;
+        }
+        .line{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 65px;
+        }
+        .line2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 65px;
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+            .obj1{
+                position: absolute;
+                left: -160px;
+                bottom: 35px;
+            }
+            .obj2{
+                position: absolute;
+                right: -160px;
+                bottom: 35px;
+            }
+        }
+    }
+    #line-spa{
+        height: 302px;
+        background: #BADBFE;
+        border: 0.5px solid #BADBFE;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 17px rgba(117, 183, 240, 0.25);
+        margin-top: 150px;
+        .image-super{
+            margin-top: -100px;
+        }
+        .cts{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -40px;
+        }
+    }
+    #links{
+        margin-top: 115px;
+        .al-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            margin-top: 45px;
+            background: #FFFFFF;
+            border: 1px solid #73E4EC;
+            box-sizing: border-box;
+            border-radius: 8px;
+            width: 99%;
+            padding: 20px 12px;
+            > div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                p{
+                    margin: 15px 0 25px 0;
+                    width: 100%;
+                    display: block;
                 }
             }
         }

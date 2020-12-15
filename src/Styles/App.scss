@@ -95,21 +95,103 @@ input, button, textarea{
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        li:last-child{
+        > li:last-child{
             a{
                 margin-right: 0;
             }
         }
-        li:first-child{
+        > li:first-child{
             a{
                 margin-left: 40px;
             }
         }
-        a{
+        > li > a{
             margin-right: 25px;
         }
         a:hover{
             color:#fff;
+            text-decoration: none;
+            position: relative;
+        }
+        > li > a:hover:after{
+            content: "";
+            width: 100%;
+            height: 4px;
+            background: #FFFE06;
+            position: absolute;
+            top: -4px;
+            left: 0;
+            border-radius: 8px;
+
+        }
+        li.submenu{
+            position: relative;
+            z-index: 9;
+            ul{
+                opacity: 0;
+                height: 0;
+                width: 0;
+            }
+        }
+        li.submenu:hover{
+            position: relative;
+            ul{
+                opacity: 1;
+                width: 150px;
+                height: 102px;
+                position: fixed;
+                top: 75px;
+                margin-left: -47px;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 11px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+                li{
+                    position: relative;
+                    z-index: 9;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 51px;
+                    width: 100%;
+                    a{
+                        width: 100%;
+                        font-size: 16px;
+                        color: #686868;
+                        position: relative;
+                        z-index: 9;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                li:first-child:before{
+                    content: "";
+                    position: absolute;
+                    width: 121px;
+                    height: 2px;
+                    left: 15px;
+                    bottom: 0px;
+                    background: #D6D6D6;
+                }
+            }
+            ul:after{
+                content: "";
+                position: absolute;
+                width: 43.71px;
+                height: 43.71px;
+                left: 51px;
+                top: -4px;
+                background: #FFFFFF;
+                border-radius: 4px;
+                transform: matrix(0.71, 0.68, -0.73, 0.71, 0, 0);
+            }
         }
     }
     .menu-right{
@@ -127,6 +209,28 @@ input, button, textarea{
         }
         a:hover{
             color:#fff;
+            text-decoration: none;
+            position: relative;
+        }
+        > li > a.n-bt:hover:after{
+            content: "";
+            width: 100%;
+            height: 4px;
+            background: #FFFE06;
+            position: absolute;
+            top: -4px;
+            left: 0;
+            border-radius: 8px;
+
+        }
+        li.submenu{
+            position: relative;
+            z-index: 9;
+            ul{
+                opacity: 0;
+                height: 0;
+                width: 0;
+            }
         }
     }
     .redes{
@@ -191,6 +295,9 @@ input, button, textarea{
             margin-top: 45px;
             padding-top: 35px;
             border-top: 1px solid #D6D6D6;
+            .bt:hover{
+                color: #0056b3;
+            }
         }
         .ft-redes{
             display: flex;
@@ -293,6 +400,9 @@ input, button, textarea{
             }
             a:first-child{
                 margin-right: 25px;
+            }
+            a.border-blue:hover{
+                color: #0056b3;
             }
         }
     }

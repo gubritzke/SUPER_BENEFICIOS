@@ -36,14 +36,31 @@ export default function Index() {
                                 <b>deixamos sua vida mais fácil!</b>
                             </span>
                             <p className="font-16 cl-black">
-                                A <b>Super Benefícios</b> visa entregar aos seus associados os <b>melhores benefícios nas mais diversas áreas,</b> proporcionando segurança, facilidades e vantagens financeiras, que resultarão em <b>mais economia, tempo e qualidade de vida.</b>
+                                A <b>SUPER BENEFÍCIOS</b> vem estabelecer uma nova forma de relacionar com nossos associados, de forma competitiva diante do mercado, priorizando um Atendimento diferenciado com Agilidade e Qualidade.
                                 <br />
                                 <br />
-                                Com <b>inovação, busca por excelência no atendimento e gestão, foco e senso de urgência e de valor,</b> almejamos, muito em breve, sermos reconhecidos como a maior Plataforma Digital de Proteção e Benefícios.
+                                Acreditamos que esta proximidade proporcionará um atendimento personalizado para que nosso Associado sinta Segurança em suas necessidades em relação a proteção de seu Patrimônio.
+                                <br />
+                                <br />
+                                <b>Além disso, temos o compromisso de oferecer a melhor Proteção e os melhores Benefícios, com abrangência nacional.</b>
                             </p>
                         </div>
                         <div className="col-5">
                             <img className="imgmap animated fadeInRight" src={Map} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="nosso-manifesto">
+                <div className="content">
+                    <div className="row no-gutters box-blue bg-blue">
+                        <div className="col-12">
+                            <span className="cl-yellow"><img src={IconNosso} /> Nosso Manifesto</span>
+                            <p className="cl-white">
+                                A <b>Super Benefícios</b> visa entregar aos seus associados os <b>melhores benefícios nas mais diversas áreas,</b> proporcionando segurança, facilidades e vantagens financeiras, que resultarão em <b>mais economia, tempo e qualidade de vida.</b>
+                                <br /><br />
+                                Com <b>inovação, busca por excelência no atendimento e gestão, foco e senso de urgência e de valor,</b> almejamos, muito em breve, sermos reconhecidos como a maior Plataforma Digital de Proteção e Benefícios.
+                            </p>
                         </div>
                     </div>
                 </div>
