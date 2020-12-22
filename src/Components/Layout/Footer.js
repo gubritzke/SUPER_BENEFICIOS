@@ -19,6 +19,7 @@ import Whatsimage from '../../images/sobre/whats.svg'
 import Modal from '../Modal/index';
 
 import ModalImage from '../../images/modal/image-modal.png'
+import { BrowserView, MobileView } from 'react-device-detect';
 
 
 export default function Footer(){
@@ -64,14 +65,14 @@ export default function Footer(){
                             </div>
                         </div>
 
-                        <div className="col-lg-5 col-md-12 bd-left">
+                        <div className="col-lg-5 col-md-12 bd-left imgs-footer">
                             <img src={Logoaapv} />
                             <img src={Logofgrs} />
                         </div>
 
                         <div className="col-lg-12 col-md-12 row no-gutters ft-line2">
                             <div className="col-lg-5 col-md-12 ft-buttons">
-                                <Link className="bt border-blue cl-blue f-weight-700 font-14"><img src={IconPlus} />Seja um representante</Link>
+                                <Link to="/representante" className="bt border-blue cl-blue f-weight-700 font-14"><img src={IconPlus} />Seja um representante</Link>
                                 <Link className="bt border-blue cl-blue f-weight-700 font-14"><img src={Whatsapp} />Associe-se pelo WhatsApp</Link>
                             </div>
                             <div className="col-lg-2 col-md-12 ft-redes">
@@ -79,10 +80,18 @@ export default function Footer(){
                                 <Link><img src={Instagram} /></Link>
                             </div>
                             <div className="col-lg-5 col-md-12 ft-contatos">
-                               
-                                <p className="cl-black f-weight-700">Central de vendas: <Link className="cl-blue f-weight-400">(31) 4003 5542 </Link></p>
-                                <p className="cl-black f-weight-700">Atendimento ao Associado: <Link className="cl-blue f-weight-400">(31) 4003 5548 </Link></p>
-                                <p className="cl-black f-weight-700">Assistência 24h: <Link className="cl-blue f-weight-400">0800 940 2121</Link> | Furto e roubo 24h: <Link className="cl-blue f-weight-400">0800 761 4418</Link> </p>
+                                <BrowserView>
+                                    <p className="cl-black f-weight-700">Central de vendas: <Link className="cl-blue f-weight-400">(31) 4003 5542 </Link></p>
+                                    <p className="cl-black f-weight-700">Atendimento ao Associado: <Link className="cl-blue f-weight-400">(31) 4003 5548 </Link></p>
+                                    <p className="cl-black f-weight-700">Assistência 24h: <Link className="cl-blue f-weight-400">0800 940 2121</Link> | Furto e roubo 24h: <Link className="cl-blue f-weight-400">0800 761 4418</Link> </p>
+                                </BrowserView>
+
+                                <MobileView>
+                                    <p className="cl-black f-weight-700">Central de vendas: <Link className="cl-blue f-weight-400">(31) 4003 5542 </Link></p>
+                                    <p className="cl-black f-weight-700">Atendimento ao Associado: <Link className="cl-blue f-weight-400">(31) 4003 5548 </Link></p>
+                                    <p className="cl-black f-weight-700">Assistência 24h: <Link className="cl-blue f-weight-400">0800 940 2121</Link></p>
+                                    <p className="cl-black f-weight-700"> Furto e roubo 24h: <Link className="cl-blue f-weight-400">0800 761 4418 </Link></p>
+                                </MobileView>
                             </div>
                         </div>
                     </div>
@@ -102,16 +111,25 @@ export default function Footer(){
             </div>
             <div id="tudo" className="animated fadeInUp">
                 <div className="content">
-                    <div className="row">
-                        <div className="col-7 texts">
-                            <p className="cl-black">Tudo isso por preços que cabem no seu bolso  | <span className="cl-light-blue"><b>Atendemos 24 horas em todo Brasil</b></span></p>
+                    <BrowserView>
+                        <div className="row">
+                            <div className="col-7 texts">
+                                <p className="cl-black">Tudo isso por preços que cabem no seu bolso  | <span className="cl-light-blue"><b>Atendemos 24 horas em todo Brasil</b></span></p>
+                            </div>
+                            <div className="col-lg-5 col-md-12 buttons">
+                                <Link onClick={(e) => setModalFtActive(true)} className="cl-white bg-blue bt" ><img src={Star} />Faça sua cotação online</Link> 
+                                <Link className="cl-blue bt border-blue"><img src={Whatsimage} /> Fale conosco</Link>
+                            </div>
                         </div>
-
-                        <div className="col-5 buttons">
-                            <Link onClick={(e) => setModalFtActive(true)} className="cl-white bg-blue bt" ><img src={Star} />Faça sua cotação online</Link> 
-                            <Link className="cl-blue bt border-blue"><img src={Whatsimage} /> Fale conosco</Link>
+                    </BrowserView>
+                    <MobileView>
+                        <div className="row">
+                            <div className="col-12 buttons">
+                                <Link onClick={(e) => setModalFtActive(true)} className="cl-white bg-blue bt" ><img src={Star} />Faça sua cotação online</Link> 
+                                <Link className="cl-blue bt border-blue"><img src={Whatsimage} /> Fale conosco</Link>
+                            </div>
                         </div>
-                    </div>
+                    </MobileView>
                 </div>
             </div>
 
@@ -119,12 +137,22 @@ export default function Footer(){
             <div id="modal-ini" className="bg-blue">
                 <button onClick={(e) => setModalFtActive(false)} className="fechar"></button>
                 <img src={ModalImage} />
-                <div className="buttons">
-                    <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
-                    <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
-                    <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
-                    <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
-                </div>
+                <BrowserView>
+                    <div className="buttons">
+                        <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
+                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
+                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                        <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                    </div>
+                </BrowserView>
+                <MobileView>
+                    <div className="buttons">
+                        <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
+                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
+                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
+                        <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
+                    </div>
+                </MobileView>
             </div>
         </Modal>
 

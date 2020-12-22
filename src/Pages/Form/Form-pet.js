@@ -22,6 +22,10 @@ import IconS9 from '../../images/forms/Icons-9.svg'
 import Image from '../../images/forms/image-pet.png'
 import Logo from '../../images/forms/logo-vida.svg'
 
+import ImagePetMobile from '../../images/forms/image-pet-mobile.png'
+
+import InputMask from 'react-input-mask';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 
 export default function Index() {
@@ -78,24 +82,41 @@ export default function Index() {
             <div id="formg">
                 <div className="content">
                     <div className="row">
-                        <div className="col-6 left-form" >
+                        <div className="col-lg-6 col-md-12 left-form" >
                             <div className="text">
                                 <div className="breve-pet bg-yellow cl-black font-16 f-weight-700">
                                     <span>Em <br />
                                     breve!</span>
                                 </div>
-                                <span className="txt font-32 cl-white font-weight-700">
-                                Todos os <br />
-                                membros da <br />
-                                família merece<br />
-                                o melhor!<br />
-                                <b>Os de 4 patas <br />
-                                também!</b>
-                                </span>
+                                <BrowserView>
+                                    <span className="txt font-32 cl-white font-weight-700">
+                                        Todos os <br />
+                                        membros da <br />
+                                        família merece<br />
+                                        o melhor!<br />
+                                        <b>Os de 4 patas <br />
+                                        também!</b>
+                                    </span>
+                                </BrowserView>
+                                <MobileView>
+                                    <span className="txt font-32 cl-white font-weight-700">
+                                        Todos os
+                                        membros da<br />
+                                        família merece
+                                        o melhor!<br />
+                                        <b>Os de 4 patas
+                                        também!</b>
+                                    </span>
+                                </MobileView>
                             </div>
-                            <img className="image-pet" src={Image} />
+                            <MobileView>
+                                <img className="image-pet-mobile" src={ImagePetMobile} />
+                            </MobileView>
+                            <BrowserView>
+                                <img className="image-pet" src={Image} />
+                            </BrowserView>
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-md-12">
                             <div className="box-form row no-gutters form animated fadeIn">
                                 <div className="col-12 row no-gutters infos">
                                     <img src={Logo} />
@@ -111,7 +132,7 @@ export default function Index() {
                                         </div>
 
                                         <div className="col-12">
-                                        <input type="text" name="telefone" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} placeholder="Telefone" />
+                                        <InputMask mask="(99) 99999-9999"  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
                                         </div>
                                         
                                         <div className="col-12" align="right">
@@ -119,7 +140,7 @@ export default function Index() {
                                         </div>
 
                                         <div className="col-12">
-                                            <textarea value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)} name="mensagem">
+                                            <textarea placeholder="Mensagem" value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)} name="mensagem">
                                                 Mensagem
                                             </textarea>
                                         </div>

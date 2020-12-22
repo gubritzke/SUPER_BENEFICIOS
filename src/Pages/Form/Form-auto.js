@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 
+import {Helmet} from "react-helmet";
+
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
@@ -33,7 +35,7 @@ export default function Index() {
             <div id="formg">
                 <div className="content">
                     <div className="row">
-                        <div className="col-6 left-form" align="center">
+                        <div className="col-lg-6 col-md-12 left-form" align="center">
                             <div className="carousel">
                             <Carousel                      
                             arrows
@@ -57,7 +59,7 @@ export default function Index() {
                             <Link className="bt border-white font-16 cl-white">Veja mais informações</Link>
                             <img className="image-auto" src={ImageAuto} />
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-md-12">
                             <div className="box-form row no-gutters form animated fadeIn">
                                 <div className="col-12 row no-gutters infos">
                                     <img src={LogoAuto} />
@@ -69,45 +71,45 @@ export default function Index() {
                                         + Receba benefícios Super Saúde com seu Super Auto! Simule e confira!
                                     </div>
                                 </div>
-                                <div className="col-12 row no-gutters">
-                                    <form className="col-12 row no-gutters">
+                                <div className="col-12 row form-auto">
                                         <div className="col-12">
                                             <select id="pwrVhclTp"></select>
                                         </div>
+
                                         <div className="col-12">
-                                            <input type="text" maxlength="7" id="pwrVhclPlts"/>
+                                            <input type="text" id="pwrAssocNm" maxlength="256" placeholder="Nome" />
+                                        </div>
+                                        
+                                        <div className="col-lg-6 col-md-12">
+                                            <input type="email" id="pwrAssocEml" maxlength="128" placeholder="E-mail" />
+                                        </div>
+                                        
+                                        <div className="col-lg-6 col-md-12" align="right">
+                                            <input type="text" id="pwrAssocPhn" maxlength="31" placeholder="Telefone" />
                                         </div>
 
-                                        <div className="col-6">
+                                        <div className="col-lg-6 col-md-12">
+                                            <input type="text" maxlength="7" id="pwrVhclPlts" placeholder="Placa" />
+                                        </div>
+
+                                        <div className="col-lg-6 col-md-12" align="right">
                                             <select id="pwrVhclBrnd"><option>Marca</option></select>
                                         </div>
 
-                                        <div className="col-6" align="right">
+                                        <div className="col-lg-6 col-md-12">
                                         <select id="pwrVhclVrsn"><option>Ano Modelo</option></select>
                                         </div>
                                         
-                                        <div className="col-6">
+                                        <div className="col-lg-6 col-md-12" align="right">
                                         <select id="pwrVhclMdl"><option>Modelo</option></select>
                                         </div>
                                         
-                                        <div className="col-6" align="right">
-                                        <input type="text" id="pwrAssocNm" maxlength="256" />
-                                        </div>
-                                        
-                                        <div className="col-6">
-                                        <input type="email" id="pwrAssocEml" maxlength="128" />
-                                        </div>
-                                        
-                                        <div className="col-6" align="right">
-                                        <input type="text" id="pwrAssocPhn" maxlength="31" />
-                                        </div>
-                                        
-                                        <div className="col-6" >
+                                        <div className="col-lg-6 col-md-12" >
                                         <select id="pwrStt"></select>
                                         </div>
                                         
-                                        <div className="col-6" align="right">
-                                        <select id="pwrCty" data-placeholder="Selecione a cidade"></select>
+                                        <div className="col-lg-6 col-md-12" align="right">
+                                        <select id="pwrCty" data-placeholder="Selecione a cidade"><option>Cidade</option></select>
                                         </div>
                                         
                                         <div className="ipt-check col-12">
@@ -117,13 +119,13 @@ export default function Index() {
                                         <div className="ipt-check col-12">
                                             <button id="pwrActnSnd">Receber cota&ccedil;&atilde;o <img src={ArrowYellow} /></button>
                                         </div>
-                                    </form>
                                 </div>
                             </div>   
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }

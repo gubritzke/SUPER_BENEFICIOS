@@ -23,7 +23,7 @@
                 margin-bottom: 20px;
                 display: block;
                 width: 380px;
-                z-index: 9;
+                z-index: 8;
                 position: relative;
             }
             .inf-saude{
@@ -147,7 +147,8 @@
                     margin-bottom: 22px;
                 }
             }
-            form{
+            form,
+            .form-auto{
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
@@ -212,6 +213,128 @@
             }
         }
     }
+}
 
-
+@media screen and (max-width: 750px){
+    .box-form{
+        .infos{
+            text-align: center;
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 450px;
+            }
+            p{
+                display: block;
+                margin: 0 auto;
+                font-size: 35px;
+            }
+            .box-bl{
+                font-size: 35px !important;
+                padding: 24px 0 !important;
+            }
+        }
+    }
+    #credenciados #formg .form form input[type=text], 
+    #credenciados #formg .form form input[type=email], 
+    #credenciados #formg .form form select, 
+    #credenciados #formg .form .form-auto input[type=text], 
+    #credenciados #formg .form .form-auto input[type=email], 
+    #credenciados #formg .form .form-auto select, 
+    #credenciados #formg .form .form-auto textarea{
+        height: 80px;
+        font-size: 28px;
+        margin-bottom: 25px;
+        padding-left: 15px;
+    }
+    #credenciados #formg .form form textarea, 
+    #credenciados #formg .form .form-auto textarea{
+        font-size: 28px;
+        margin-bottom: 25px;
+        padding-left: 15px;
+    }
+    #credenciados #formg .form form .ipt-check span, 
+    #credenciados #formg .form .form-auto .ipt-check span{
+        font-size: 32px;
+        margin-top: 19px !important;
+        margin-left: 15px !important;
+    }
+    #credenciados input[type=checkbox]{
+        height: 35px;
+        width: 35px;
+        margin-top: 25px !important;
+    }
+    #credenciados #formg .form form .ipt-check button,
+    #credenciados #formg .form .form-auto .ipt-check button{
+        font-size: 40px;
+        margin-top: 25px;
+        display: block;
+        img{
+            width: 40px;
+        }
+    }
+    #credenciados{
+        .left-form{
+            text-align: center;
+            > a{
+                font-size: 35px;
+                padding: 12px 30px;
+                display: inline-block;
+                margin: 0 auto 45px auto !important;
+            }
+            .BrainhubCarousel__arrowRight span,
+            .BrainhubCarousel__arrowLeft span{
+                width: 70.7px !important;
+                height: 70.7px !important;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .BrainhubCarousel__arrowRight,
+            .BrainhubCarousel__arrowLeft {
+                right: 0 !important;
+                left: 0 !important;
+            }
+            .carousel{
+                width: 500px !important;
+                img{
+                    width: 300px;
+                }
+            }
+            .carousel-vida{
+                margin: 0 auto !important;
+                width: 500px !important;
+                img{
+                    width: 300px;
+                }
+            }
+            .text{
+                .txt{
+                    font-size: 50px;
+                }
+                p{
+                    font-size: 34px;
+                }
+            }
+        }
+        .image-saude-bottom{
+            display: block;
+            float: right;
+            width: 100%;
+            margin-bottom: -94px;  
+        }
+        .image-casa {
+            position: inherit !important;
+            display: block;
+            margin: -167px -28px 12px 0;
+            float: right;
+        }
+        .breve,
+        .breve-pet{
+            display: none;
+        }
+        .image-pet-mobile{
+            width: 647px;
+            margin: -242px -102px -418px 0;
+        }
+    }
 }

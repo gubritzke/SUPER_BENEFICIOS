@@ -61,3 +61,29 @@
         }
     }
 }
+
+@media screen and (max-width: 750px){
+    #sobre{
+        #banner{
+            img{
+                left: -808px;
+            }
+            .conteudos{
+                .imgmap {
+                    position: absolute;
+                    left: 0;
+                    top: -158px;
+                }
+                .texts{
+                    margin-top: 600px;
+                    span{
+                       font-size: 47px;
+                    }
+                    p{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

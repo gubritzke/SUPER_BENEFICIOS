@@ -160,3 +160,95 @@
         }
     }
 }
+
+
+@media screen and (max-width: 750px){
+    #Representante{
+        .conteudos{
+            .image{
+                margin: -50px auto 0 auto;
+                width: 100%;
+                display: block;
+            }
+            .texts{
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-top: 60px !important;
+                span{
+                    font-size: 60px;
+                }
+                img{
+                    display: none;
+                }
+                p{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    #notice{
+        .box{
+            height: auto !important;
+            margin-bottom: 45px;
+        }
+    }
+    #video{
+        .video-box{
+            margin-bottom: 45px;
+        }
+        .texts{
+            text-align: center;
+            > span{
+                font-size: 45px;
+            }
+            p{
+                font-size: 35px;
+                margin: 20px 0 40px 0;
+            }
+            a{
+                font-size: 40px;
+                padding: 10px 40px;
+                img{
+                    width: 40px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    #icons{
+        img{
+            width: 400px;
+            padding:  0 20px;
+        }
+    }
+    #contato{
+        .box{
+            .texts{
+                margin-bottom: 45px;
+                text-align: center;
+                span{
+                    font-size: 50px;
+                }
+                p{
+                    font-size: 35px;
+                }
+            }
+            form{
+                padding-left: 0 !important;
+                input{
+                    height: 70px !important;
+                    font-size: 28px;
+                }
+                textarea{
+                    font-size: 28px;
+                }
+                button{
+                    font-size: 30px;
+                    img{
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

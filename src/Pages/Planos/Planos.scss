@@ -310,3 +310,191 @@
         }
     }
 }
+
+@media screen and (max-width: 750px){
+    #super-auto{
+        #banner{
+            > img{
+                left: -840px;
+            }
+            .conteudos{
+                .img{
+                    display: block;
+                    margin: 400px auto 0 auto;
+                    width: 600px;
+                }
+                .imgmap {
+                    position: absolute;
+                    left: 0;
+                    top: -158px;
+                }
+                .texts{
+                    margin-top: 600px;
+                    span{
+                       font-size: 47px;
+                    }
+                    p{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+        #produtos {
+            margin-top: 116px;
+        }
+        #vantauto{ 
+            .image{
+                img{
+                    width: 120px;
+                }
+            }
+        }
+
+    }
+
+    #super-vida{
+        #banner{
+            > img{
+                left: -840px;
+            }
+            .conteudos{
+                .img{
+                    display: block;
+                    margin: 400px auto 0 auto;
+                    width: 600px;
+                }
+                .imgmap {
+                    position: absolute;
+                    left: 0;
+                    top: -158px;
+                }
+                .texts{
+                    margin-top: 600px;
+                    span{
+                       font-size: 47px;
+                    }
+                    p{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+        #produtos {
+            margin-top: 116px;
+        }
+        #vantauto{ 
+            .image{
+                img{
+                    width: 120px;
+                }
+            }
+        }
+        #planos {
+            margin: 100px 0;
+            padding: 0;
+            .box{
+                margin: 0 auto 75px auto;
+                display: block;
+                .list span {
+                    display: flex;
+                    font-size: 30px;
+                    line-height: 33px;
+                    margin-bottom: 27px;
+                }
+                .footer{
+                    p{
+                        font-size: 33px;
+                    }
+                    span.valor{
+                        font-size: 45px;
+                        span{
+                            font-size: 35px;
+                        }
+                    }
+                    a.bt{
+                        font-size: 37px;
+                        padding: 8px 45px;
+                    }
+                }
+            }
+            .last-box{
+                margin-bottom: 0;
+            }
+        }
+        #qualdiade{
+            .mobile-image{
+                width: 674px;
+                display: block;
+                margin-top: 85px;
+            }
+            .titulo{
+                font-size: 40px;
+            }
+            .texts{
+                .box{
+                    width: 100%;
+                    margin-top: -50px;
+                    height: 180px;
+                    border-radius: 30px;
+                    > span{
+                        font-size: 35px;
+                    }
+                    > p{
+                        font-size: 33px;
+                    }
+                }
+            }
+        }
+        #vantavida{
+            margin-top: 100px;
+            span{
+                font-size: 45px;
+            }
+            .image{
+                position: relative;
+                height: 350px;
+                text-align: center;
+                img{
+                    width: 150px;
+                    display: block;
+                    margin: 0 auto;
+                }
+                span{
+                    font-size: 30px;
+                    text-align: center;
+                    bottom: 40px;
+                    display: block;
+                    margin: 20px auto 0 auto;
+                }
+                p{
+                    display: block;
+                    margin: 21px auto 0 auto;
+                    font-size: 23px;
+                    color: #8A99A8;
+                }
+            }
+        }
+        #line-spa{
+            height: auto;
+            padding-bottom: 50px;
+            .image-super{
+                display: block;
+                margin: 0 0 0 -25px;
+                width: 750px;
+            }
+            .cts{
+                margin-top: 15px;
+                img{
+                    width: 500px;
+                }
+                a{
+                    display: block;
+                    width: 80%;
+                    text-align: center;
+                    margin-top: 45px;
+                    font-size: 33px;
+                }
+            }
+        }
+    }
+}

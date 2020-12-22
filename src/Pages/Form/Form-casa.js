@@ -80,7 +80,7 @@ export default function Index() {
             <div id="formg">
                 <div className="content">
                     <div className="row">
-                        <div className="col-6 left-form" >
+                        <div className="col-lg-6 col-md-12 left-form" >
                             <div className="text">
                                 <div className="breve bg-yellow cl-black font-16 f-weight-700">
                                     <span>Em <br />
@@ -97,7 +97,7 @@ export default function Index() {
                             </div>
                             <img className="image-casa" src={Image} />
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-md-12">
                             <div className="box-form row no-gutters form animated fadeIn">
                                 <div className="col-12 row no-gutters infos">
                                     <img src={Logo} />
@@ -121,7 +121,7 @@ export default function Index() {
                                         </div>
 
                                         <div className="col-12">
-                                            <textarea value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)} name="mensagem">
+                                            <textarea placeholder="Mensagem" value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)} name="mensagem">
                                                 Mensagem
                                             </textarea>
                                         </div>

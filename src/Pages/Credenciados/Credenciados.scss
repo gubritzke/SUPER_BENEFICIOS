@@ -73,3 +73,33 @@
     }
 
 }
+
+@media screen and (max-width: 750px){
+    #search{
+        text-align: center;
+        .image-mobile{
+            width: 100%;
+            margin: 35px 0;
+        }
+        .logo{
+            width: 500px;
+            margin-top: 20px;
+            margin-bottom: 45px;
+        }
+        select{
+            width: 90% !important;
+            display: block;
+            margin: 0 auto;
+            height: 70px;
+            font-size: 30px;
+        }
+        .text{
+            span{
+                font-size: 45px;
+            }
+            p{
+                font-size: 40px;
+            }
+        }
+    }
+}

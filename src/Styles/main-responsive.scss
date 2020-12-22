@@ -52,6 +52,14 @@
         width: 100%;
         z-index: 9;
         top: 0;
+        background: #01319e;
+        margin-top: 0;
+        height: 112px;
+        .ctr-logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .logo{
             img{
                 width: 250px;
@@ -59,11 +67,25 @@
         }
         .menu-mobile{
             a{
-                font-size: 30px;
+                font-size: 45px;
+                margin-bottom: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 45px;
+                }
+                .img-left{
+                    margin-right: 15px;
+                    margin-top: -10px;
+                }
+                .whta{
+                    margin-top: -10px;
+                }
             }
             .bt{
-                padding: 45px 10px;
                 text-align: center;
+                font-size: 38px;
             }
             .icon-rede{
                 margin-top: 25px;
@@ -77,16 +99,20 @@
     #footer{
         #footer-1 {
             img.logo-footer{
-                margin-bottom: 45px;
-                width: 280px;
+                width: 330px;
+                display: block;
+                margin: 0 auto 55px auto;
             }
             .uls-menus{
                 ul{
                     width: 100%;
-                    margin-bottom: 0;
+                    margin-bottom: 40px;
+                    text-align: center;
                     li{
+                        margin-bottom: 40px;
+                        display: block;
                         a{
-                            font-size: 31px;
+                            font-size: 35px;
                             img{
                                 width: 45px;
                                 margin: 15px 15px 15px 0;
@@ -98,14 +124,81 @@
                         margin-bottom: 15px;
                     }
                 }
+                ul:last-child{
+                    width: 100%;
+                    margin-bottom: 60px;
+                    display: block;
+                }
             } 
+            .ft-buttons{
+                flex-direction: column;
+                a{
+                    width: 550px;
+                    display: block;
+                    font-size: 30px;
+                    padding: 15px 0px;
+                    img{
+                        width: 40px;
+                        margin-right: 25px;
+                    }
+                }
+                a{
+                    margin-top: 35px;
+                }
+                a:last-child{
+                    margin-bottom: 65px;
+                }
+            }
             ul.redes:after{
                 width: 0;
+            }
+            .imgs-footer{
+                flex-direction: column;
+                border-top: 1px solid #D6D6D6;
+                border-left: none;
+                padding-top: 55px;
+                padding-bottom: 25px;
+                img{
+                    display: block;
+                    width: 300px;
+                }
+                img:first-child{
+                    margin-bottom: 85px
+                }
+                img:last-child{
+                    width: 400px;
+                }
+            }
+            .ft-redes{
+                margin-bottom: 80px;
+                img{
+                    width: 70px;
+                }
+            }
+            .ft-contatos{
+                font-size: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                    a{
+                        font-size: 33px;
+                        margin-top: 8px;
+                    }
+                }
             }
         }
         #footer-2{
             height: auto;
             padding: 15px 0;
+            margin-bottom: 97px;
             p{
                 text-align: center;
                 display: block;
@@ -163,5 +256,104 @@
                 margin-bottom: 0;
             }
         }
+    }
+
+    #footer #footer-1 {
+        background-color: #F5F5F5;
+        padding: 55px 0;
+        z-index: 7;
+        position: relative;
+    }
+    
+    #footer{
+        #tudo{
+            .buttons{
+                justify-content: center;
+                align-items: center;
+                padding: 8px 0;
+                a{
+                    font-size: 25px;
+                    padding: 10px 25px;
+                    img{
+                        width: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    #solicite{ 
+        .left-sr{
+            .image {
+                margin-left: 88px;
+                margin-bottom: -70px;
+            }
+        }
+        .left-srot{
+            margin-bottom: -100px;
+        }
+        .bg-green-mobile{
+            width: 750px;
+            position: absolute;
+            left: -24px;
+            bottom: -375px;
+        }
+        .left-sl{
+            margin-top: -130px;
+            span{
+                margin-top: -200px;
+                display: block;
+                font-size: 67px;
+            }
+            a{
+                margin-top: 40px;
+                font-size: 35px;
+                font-weight: 500;
+                padding: 8px 30px;
+                img{
+                    width: 40px;
+                }
+            }
+            .bg-pontos {
+                position: absolute;
+                left: -132px;
+                top: -481px;
+                width: 248px;
+            }
+        }
+    }
+    #loginass{
+        h2{
+            font-size: 40px;
+            margin-bottom: 35px;
+            margin-top: 35px;
+        }
+        input{
+            height: 70px !important;
+            font-size: 32px;
+        }
+    }
+    #loginass button.fechar:before,
+    #loginass button.fechar:after{
+        height: 5px;
+        width: 45px;
+        margin-top: 15px;
+    }
+    #modal #modal-ini .buttons{
+        flex-direction: column;
+    }
+    #modal #modal-ini .buttons a{
+        width: 450px;
+        display: block;
+        text-align: center;
+        padding: 12px 0;
+        margin: 0 auto 25px auto;
+        color: #fff;
+    }
+    #modal button.fechar:before,
+    #modal button.fechar:after{
+        height: 5px;
+        width: 45px;
+        margin-top: 15px;
     }
 }

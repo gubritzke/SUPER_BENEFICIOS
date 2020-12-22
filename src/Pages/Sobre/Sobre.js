@@ -4,6 +4,9 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import Modal from '../../Components/Modal/index';
 
+import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
+import bgNaoGreenMobile from '../../images/nao-pedimos/bg-mobile1.svg'
+
 import './Sobre.scss';
 
 import BgBanner from '../../images/sobre/banner-full.png'
@@ -30,7 +33,12 @@ export default function Index() {
                 <img src={BgBanner} className="animated fadeInDown" />
                 <div className="content">
                     <div className="row conteudos">
-                        <div className="col-7 texts animated fadeIn">
+                        <MobileView>
+                            <div className="col-lg-5 col-md-12">
+                                <img className="imgmap animated fadeInRight" src={Map} />
+                            </div>
+                        </MobileView>
+                        <div className="col-lg-7 col-md-12 texts animated fadeIn">
                             <span className="font-32">
                                 Muito mais que benefícios, <br />
                                 <b>deixamos sua vida mais fácil!</b>
@@ -42,36 +50,37 @@ export default function Index() {
                                 Com <b>inovação, busca por excelência no atendimento e gestão, foco e senso de urgência e de valor,</b> almejamos, muito em breve, sermos reconhecidos como a maior Plataforma Digital de Proteção e Benefícios.
                             </p>
                         </div>
+                        <BrowserView>
                         <div className="col-5">
                             <img className="imgmap animated fadeInRight" src={Map} />
                         </div>
+                        </BrowserView>
                     </div>
                 </div>
             </div>
 
+            <BrowserView>
             <div id="solicite">
                 <div className="content">
                     <div className="row">
-                        <div className="col-4 left-sl">
-                            <ScrollAnimation animateOnce animateIn='fadeIn'>
-                                <img className="bg-slgrenn" src={bgNaoGreen} />
-                            </ScrollAnimation>
-                            <ScrollAnimation animateOnce delay={250} animateIn='fadeIn'>
-                                <img className="bg-pontos" src={bgNaoPontos} />
-                            </ScrollAnimation>
-                            
-                            <span className="cl-white font-56 f-weight-700">
-                            Sem análise<br />
-                            de perfil, Sem <br />
-                            complicação.
-                            </span>
-                            <p className="cl-white font-24 f-weight-700">
-                            Queremos simplificar sua vida. <br />
-                            Vem com a gente!
-                            </p>
-                            <Link onClick={(e) => setModalFtActive(true)} className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
-                        </div>
-                        <div className="col-8 left-sr">
+                            <div className="col-lg-4 col-md-12 left-sl">
+                                <ScrollAnimation animateOnce animateIn='fadeIn'>
+                                    <img className="bg-slgrenn" src={bgNaoGreen} />
+                                </ScrollAnimation>
+                                <ScrollAnimation animateOnce delay={250} animateIn='fadeIn'>
+                                    <img className="bg-pontos" src={bgNaoPontos} />
+                                </ScrollAnimation>
+                                
+                                <span className="cl-white font-64 f-weight-700">
+                                    Não
+                                    pedimos
+                                    análise<br />
+                                    de perfil.
+                                </span>
+                                <Link onClick={(e) => setModalFtActive(true)} className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
+                            </div>
+
+                        <div className="col-lg-8 col-md-12 left-sr left-srot">
                             <ScrollAnimation animateOnce animateIn='fadeIn'>
                                 <img className="image" src={bgImage} />
                                 <img className="bg-slyellow" src={bgNaoYellow} />
@@ -83,18 +92,59 @@ export default function Index() {
                     </div>
                 </div>
             </div>
+            </BrowserView>
+
+            <MobileView>
+            <div id="solicite">
+                <div className="content">
+                    <div className="row">
+
+                        <div className="col-lg-8 col-md-12 left-sr left-srot">
+                            <ScrollAnimation animateOnce animateIn='fadeIn'>
+                                <img className="image" src={bgImage} />
+                                <img className="bg-slyellow" src={bgNaoYellow} />
+                            </ScrollAnimation>
+                            <ScrollAnimation animateOnce animateIn='fadeInRight'>
+                                <img className="bg-green2" src={bgNaoGreen2} />
+                            </ScrollAnimation>
+                        </div>
+                        <div className="col-lg-4 col-md-12 left-sl">
+                                <img className="bg-green-mobile" src={bgNaoGreenMobile} />
+                                <img className="bg-pontos" src={bgNaoPontos} />
+                                <span className="cl-white font-64 f-weight-700">
+                                    Não
+                                    pedimos<br />
+                                    análise
+                                    de perfil.
+                                </span>
+                                <Link onClick={(e) => setModalFtActive(true)} className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </MobileView>
 
 
             <Modal modalActive={modalFtActive}>
             <div id="modal-ini" className="bg-blue">
                 <button onClick={(e) => setModalFtActive(false)} className="fechar"></button>
                 <img src={ModalImage} />
-                <div className="buttons">
-                    <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
-                    <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
-                    <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
-                    <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
-                </div>
+                <BrowserView>
+                    <div className="buttons">
+                        <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
+                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
+                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                        <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                    </div>
+                </BrowserView>
+                <MobileView>
+                    <div className="buttons">
+                        <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
+                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
+                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
+                        <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
+                    </div>
+                </MobileView>
             </div>
         </Modal>
         </div>

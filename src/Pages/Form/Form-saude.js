@@ -27,7 +27,10 @@ import IconS9 from '../../images/forms/Icons-9.svg'
 import Image from '../../images/forms/image-saude.png'
 import Logo from '../../images/forms/logo-vida.svg'
 
+import ImageMobile from '../../images/forms/form-saude-mobal.png'
+
 import InputMask from 'react-input-mask';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 
 export default function Index() {
@@ -86,7 +89,7 @@ export default function Index() {
             <div id="formg">
                 <div className="content">
                     <div className="row">
-                        <div className="col-6 left-form" >
+                        <div className="col-lg-6 col-md-12 left-form" >
                             <div className="carousel-vida">
                             <Carousel                      
                             arrows
@@ -105,9 +108,11 @@ export default function Index() {
                             </Carousel>
                             </div>
                             <Link className="bt border-white font-16 cl-white inf-saude">Veja mais informações</Link>
-                            <img className="image-saude" src={Image} />
+                            <BrowserView>
+                                <img className="image-saude" src={Image} />
+                            </BrowserView>
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-md-12">
                             <div className="box-form row no-gutters form animated fadeIn">
                                 <div className="col-12 row no-gutters infos">
                                     <img src={Logo} />
@@ -117,7 +122,7 @@ export default function Index() {
                                     </p>
                                 </div>
                                 <div className="col-12 row no-gutters">
-                                    <form className="col-12 row no-gutters" onSubmit={handleSend} method="post">
+                                    <form className="col-12 row " onSubmit={handleSend} method="post">
                                         <div className="col-12">
                                             <select name="plano" onChange={(e) => changeInputMult(e)} >
                                                 <option value="">Plano</option>
@@ -130,16 +135,16 @@ export default function Index() {
                                             <input type="text" value={camposFormulario.nome} onChange={(e) => changeInputMult(e)}  name="nome" placeholder="Nome completo"/>
                                         </div>
 
-                                        <div className="col-6">
+                                        <div className="col-lg-6 col-md-12">
                                             <InputMask mask="(99) 99999-9999"  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
                                         </div>
                                         
-                                        <div className="col-6" align="right">
+                                        <div className="col-lg-6 col-md-12" align="right">
                                             <input type="text" value={camposFormulario.email} onChange={(e) => changeInputMult(e)}  name="email" placeholder="E-mail" />
                                         </div>
 
                                         <div className="col-12">
-                                            <textarea value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)}  name="mensagem">
+                                            <textarea value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)}  name="mensagem" placeholder="Mensagem">
                                                 Mensagem
                                             </textarea>
                                         </div>
@@ -154,6 +159,13 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
+                <MobileView>
+                    <div className="row">
+                        <div className="col-12">
+                                <img className="image-saude-bottom" src={ImageMobile} />
+                        </div>
+                    </div>
+                    </MobileView>
             </div>
         </div>
     );

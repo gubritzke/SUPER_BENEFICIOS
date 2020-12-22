@@ -6,6 +6,8 @@ import Modal from '../../Components/Modal/index';
 
 import './Planos.scss';
 
+import Carousel, { Dots } from '@brainhubeu/react-carousel';
+
 import BgBanner from '../../images/planos/super-vida/banner-full.png'
 import LogoSuper from '../../images/planos/super-vida/logo-super.svg'
 
@@ -24,6 +26,7 @@ import IconNosso from '../../images/sobre/icon-nosso.svg'
 import ArrowYellow from '../../images/icon/arrow-yellow.svg'
 
 import ImageQualidade from '../../images/planos/super-vida/image-qualidade.png'
+import ImageQualidadeMobile from '../../images/planos/super-vida/image-qualidade-mobile.png'
 
 import ImageSuperAuto from '../../images/planos/super-vida/image-super-auto.svg'
 import LogoSuperAuto from  '../../images/planos/super-vida/logo-super-auto.svg'
@@ -48,7 +51,19 @@ import icon7 from '../../images/planos/super-vida/icon7.svg'
 import icon8 from '../../images/planos/super-vida/icon8.svg'
 import icon9 from '../../images/planos/super-vida/icon9.svg'
 
+import iconM1 from '../../images/planos/super-vida/iconM1.svg'
+import iconM2 from '../../images/planos/super-vida/iconM2.svg'
+import iconM3 from '../../images/planos/super-vida/iconM3.svg'
+import iconM4 from '../../images/planos/super-vida/iconM4.svg'
+import iconM5 from '../../images/planos/super-vida/iconM5.svg'
+import iconM6 from '../../images/planos/super-vida/iconM6.svg'
+import iconM7 from '../../images/planos/super-vida/iconM7.svg'
+import iconM8 from '../../images/planos/super-vida/iconM8.svg'
+import iconM9 from '../../images/planos/super-vida/iconM9.svg'
+
 import ModalImage from '../../images/modal/image-modal.png'
+import { BrowserView, MobileView } from 'react-device-detect';
+import bgNaoGreenMobile from '../../images/nao-pedimos/bg-mobile1.svg'
 
 export default function Index() {
 
@@ -144,8 +159,9 @@ export default function Index() {
                         </div>
                         </ScrollAnimation>
                     </div>
-
-                    <img className="points" src={Points} />
+                    <BrowserView>
+                        <img className="points" src={Points} />
+                    </BrowserView>
                 </div>
             </div>
         </div>
@@ -154,13 +170,15 @@ export default function Index() {
             <div className="content">
                 <div className="row">
                     <div className="col-12" align="center">
-                        <span className="cl-light-blue f-weight-700 font-32">
+                        <span className="cl-light-blue f-weight-700 font-32 titulo">
                         A qualidade de vida que sua família <br />
                         merece não precisa custar caro!
                         </span>
                     </div>
+
+                    <BrowserView>
                     <div className="col-12 row cts">
-                        <div className="col-6 texts">
+                        <div className="col-lg-6 col-md-12 texts">
                             <div className="box">
                                 <span className="cl-white font-18 f-weight-400">E muito mais:</span>
                                 <p className="cl-white font-24 f-weight-700">
@@ -170,10 +188,34 @@ export default function Index() {
                             </div>
                             <p className="cl-gray font-18">Você garante <b>preços muito mais baixos </b>em consultas, exames, remédios e ainda conta com assistência odontológica e funeral.</p>
                         </div>
-                        <div className="col-6">
-                            <img src={ImageQualidade} />
+                        
+                            <div className="col-lg-6 col-md-12">
+                                <img src={ImageQualidade} />
+                            </div>
+                        
+                    </div>
+                    </BrowserView>
+
+                    <MobileView>
+                    <div className="col-12 row cts">
+                        
+                            <div className="col-lg-6 col-md-12">
+                                <img className="mobile-image" src={ImageQualidadeMobile} />
+                            </div>
+                        
+                        <div className="col-lg-6 col-md-12 texts">
+                            <div className="box">
+                                <span className="cl-white font-18 f-weight-400">E muito mais:</span>
+                                <p className="cl-white font-24 f-weight-700">
+                                    Orientação médica por telefone <br />
+                                    <span className="cl-yellow">24h por dia, 7 dias por semana!</span> 
+                                </p>
+                            </div>
+                            <p className="cl-gray font-18">Você garante <b>preços muito mais baixos </b>em consultas, exames, remédios e ainda conta com assistência odontológica e funeral.</p>
                         </div>
                     </div>
+                    </MobileView>
+
                 </div>
             </div>
         </div>
@@ -185,50 +227,132 @@ export default function Index() {
                             <span className="cl-black font-32 title">Muito mais <b className="cl-light-blue">Benefícios!</b></span>
                         </div>
                     </div>
-                    <div className="row line">
-                        <div className="image">
-                            <img src={icon1} />
-                        </div>
-                        <div className="image">
-                            <img src={icon2} />
-                        </div>
-                        <div className="image">
-                            <img src={icon3} />
-                        </div>
-                        <div className="image">
-                            <img src={icon4} />
-                        </div>
-                        <div className="image">
-                            <img src={icon5} />
-                        </div>
-                    </div>
-                    <div className="row line2">
-                        <img className="obj1" src={PointsBene} />
-                        <img className="obj2" src={PointsBene} />
 
-                        <div className="image">
-                            <img src={icon6} />
+                    <BrowserView>
+                        <div className="row line">
+                            <div className="image">
+                                <img src={icon1} />
+                            </div>
+                            <div className="image">
+                                <img src={icon2} />
+                            </div>
+                            <div className="image">
+                                <img src={icon3} />
+                            </div>
+                            <div className="image">
+                                <img src={icon4} />
+                            </div>
+                            <div className="image">
+                                <img src={icon5} />
+                            </div>
                         </div>
-                        <div className="image">
-                            <img src={icon7} />
+                        <div className="row line2">
+                            <img className="obj1" src={PointsBene} />
+                            <img className="obj2" src={PointsBene} />
+
+                            <div className="image">
+                                <img src={icon6} />
+                            </div>
+                            <div className="image">
+                                <img src={icon7} />
+                            </div>
+                            <div className="image">
+                                <img src={icon8} />
+                            </div>
+                            <div className="image">
+                                <img src={icon9} />
+                            </div>
                         </div>
-                        <div className="image">
-                            <img src={icon8} />
-                        </div>
-                        <div className="image">
-                            <img src={icon9} />
-                        </div>
-                    </div>
+                    </BrowserView>
                 </div>
+                <MobileView>
+                        <div className="row line">
+                            <Carousel     
+                            infinite
+                            centered 
+                            slidesPerPage={2}
+                            >
+                                <div className="image">
+                                    <img src={iconM1} />
+                                    <span>
+                                        <b>Descontos de até 70%</b><br />
+                                        em consultas médicas<br />
+                                        (clínico e especialidades)
+                                    </span>
+                                </div>
+                                <div className="image">
+                                    <img src={iconM2} />
+                                    <span>
+                                        <b>Rede de descontos em</b> <br />
+                                        diversos estabelecimentos, <br />
+                                        incluindo farmácias.
+                                    </span>
+                                </div>
+                                <div className="image">
+                                    <img src={iconM3} />
+                                    <span>
+                                        <b>Assistência</b><br />
+                                        odontológica
+                                    </span>
+                                </div>
+                                <div className="image">
+                                    <img src={iconM4} />
+                                    <span>
+                                        <b>Orientação médica</b><br />
+                                        por telefone
+                                    </span>
+                                </div>
+                                <div className="image">
+                                    <img src={iconM5} />
+                                    <span>
+                                        <b>Assistência</b><br />
+                                        funeral
+                                    </span>
+                                </div>
+                                <div className="image">
+                                    <img src={iconM6} />
+                                    <span>
+                                        <b>Leva e traz</b><br />
+                                        em caso de emergência*
+                                    </span>
+                                    <p>*Plano Saúde+ </p>
+                                </div>
+                                <div className="image">
+                                    <img src={iconM7} />
+                                    <span>
+                                        <b>Check-up Médico</b><br />
+                                        anual*
+                                    </span>
+                                    <p>*Plano Saúde+ </p>
+                                </div>
+                                <div className="image">
+                                    <img src={iconM8} />
+                                    <span>
+                                        <b>Orientação</b><br />
+                                        Nutricional*
+                                    </span>
+                                    <p>*Plano Premium  </p>
+                                </div>
+                                <div className="image">
+                                    <img src={iconM9} />
+                                    <span>
+                                        <b>Orientação</b><br />
+                                        Fitness*
+                                    </span>
+                                    <p>*Plano Premium  </p>
+                                </div>
+                            </Carousel>
+                        </div>
+                    </MobileView>
             </div>
 
             <div id="line-spa">
                 <div className="content">
                     <div className="row">
-                        <div className="col-8">
+                        <div className="col-lg-8">
                             <img src={ImageSuperAuto} className="image-super" />
                         </div>
-                        <div className="col-4">
+                        <div className="col-lg-4">
                             <div className="cts">
                                 <img src={LogoSuperAuto} />
                                 <Link to="/super-auto" className=" bt border-blue cl-blue font-16" >
@@ -247,14 +371,14 @@ export default function Index() {
                         <div className="col-12" align="center">
                             <span className="font-25 cl-black">Temos novidades vindo por aí, <b>para cuidar do que realmente importa.</b></span>
                         </div>
-                        <div className="col-12 row">
+                        <div className="col-12 row no-gutters">
                             
-                            <div className="col-6 al-center">
+                            <div className="col-lg-6 col-md-12 al-center">
                                 <div className="box row">
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-md-12">
                                         <img src={ImageLink1} />
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-md-12">
                                         <span className="cl-gray font-40">Super <span className="cl-blue f-weight-700"> Casa</span></span>
                                         <p className="cl-gray font-18">Seu lar merece segurança <br /><b> e muitas vantagens!</b></p>
                                         <Link to="form-casa" className="cl-white bg-light-blue font-18 bt">Saiba mais <img src={ArrowYellow} /></Link>
@@ -262,12 +386,12 @@ export default function Index() {
                                 </div>
                             </div>
 
-                            <div className="col-6 al-center">
+                            <div className="col-lg-6 col-md-12 al-center">
                                 <div className="box row">
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-md-12">
                                         <img src={ImageLink2} />
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-md-12">
                                         <span className="cl-gray font-40">Super <span className="cl-blue f-weight-700" > Pet</span></span>
                                         <p className="cl-gray font-18">Seu amigo merece os<br /> <b>melhores benefícios!</b></p>
                                         <Link to="form-casa" className="cl-white bg-light-blue font-18 bt">Saiba mais <img src={ArrowYellow} /></Link>
@@ -279,29 +403,28 @@ export default function Index() {
                 </div>
             </div>
 
+            <BrowserView>
             <div id="solicite">
                 <div className="content">
                     <div className="row">
-                        <div className="col-4 left-sl">
-                            <ScrollAnimation animateOnce animateIn='fadeIn'>
-                                <img className="bg-slgrenn" src={bgNaoGreen} />
-                            </ScrollAnimation>
-                            <ScrollAnimation animateOnce delay={250} animateIn='fadeIn'>
-                                <img className="bg-pontos" src={bgNaoPontos} />
-                            </ScrollAnimation>
-                            
-                            <span className="cl-white font-56 f-weight-700">
-                            Sem análise<br />
-                            de perfil, Sem <br />
-                            complicação.
-                            </span>
-                            <p className="cl-white font-24 f-weight-700">
-                            Queremos simplificar sua vida. <br />
-                            Vem com a gente!
-                            </p>
-                            <Link onClick={(e) => setModalFtActive(true)}  className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
-                        </div>
-                        <div className="col-8 left-sr">
+                            <div className="col-lg-4 col-md-12 left-sl">
+                                <ScrollAnimation animateOnce animateIn='fadeIn'>
+                                    <img className="bg-slgrenn" src={bgNaoGreen} />
+                                </ScrollAnimation>
+                                <ScrollAnimation animateOnce delay={250} animateIn='fadeIn'>
+                                    <img className="bg-pontos" src={bgNaoPontos} />
+                                </ScrollAnimation>
+                                
+                                <span className="cl-white font-64 f-weight-700">
+                                    Não
+                                    pedimos
+                                    análise<br />
+                                    de perfil.
+                                </span>
+                                <Link onClick={(e) => setModalFtActive(true)} className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
+                            </div>
+
+                        <div className="col-lg-8 col-md-12 left-sr left-srot">
                             <ScrollAnimation animateOnce animateIn='fadeIn'>
                                 <img className="image" src={bgImage} />
                                 <img className="bg-slyellow" src={bgNaoYellow} />
@@ -313,17 +436,58 @@ export default function Index() {
                     </div>
                 </div>
             </div>
+            </BrowserView>
+
+            <MobileView>
+            <div id="solicite">
+                <div className="content">
+                    <div className="row">
+
+                        <div className="col-lg-8 col-md-12 left-sr left-srot">
+                            <ScrollAnimation animateOnce animateIn='fadeIn'>
+                                <img className="image" src={bgImage} />
+                                <img className="bg-slyellow" src={bgNaoYellow} />
+                            </ScrollAnimation>
+                            <ScrollAnimation animateOnce animateIn='fadeInRight'>
+                                <img className="bg-green2" src={bgNaoGreen2} />
+                            </ScrollAnimation>
+                        </div>
+                        <div className="col-lg-4 col-md-12 left-sl">
+                                <img className="bg-green-mobile" src={bgNaoGreenMobile} />
+                                <img className="bg-pontos" src={bgNaoPontos} />
+                                <span className="cl-white font-64 f-weight-700">
+                                    Não
+                                    pedimos<br />
+                                    análise
+                                    de perfil.
+                                </span>
+                                <Link onClick={(e) => setModalFtActive(true)} className="cl-blue border-yellow bt font-18">Solicite sua cotação online <img className="icon" src={ArrowBlue} /></Link>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </MobileView>
 
             <Modal modalActive={modalFtActive}>
             <div id="modal-ini" className="bg-blue">
                 <button onClick={(e) => setModalFtActive(false)} className="fechar"></button>
                 <img src={ModalImage} />
-                <div className="buttons">
-                    <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
-                    <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
-                    <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
-                    <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
-                </div>
+                <BrowserView>
+                    <div className="buttons">
+                        <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
+                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
+                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                        <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                    </div>
+                </BrowserView>
+                <MobileView>
+                    <div className="buttons">
+                        <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
+                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
+                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
+                        <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
+                    </div>
+                </MobileView>
             </div>
         </Modal>
         </div>

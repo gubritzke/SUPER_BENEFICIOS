@@ -4,6 +4,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import Modal from '../../Components/Modal/index';
 
+import Carousel, { Dots } from '@brainhubeu/react-carousel';
+
 import './Representante.scss';
 
 import BgBanner from '../../images/representantes/banner.svg'
@@ -25,6 +27,7 @@ import Icon6 from '../../images/representantes/icon-6.png'
 
 
 import ArrowDown from '../../images/representantes/arrow-down.svg'
+import { BrowserView, MobileView } from 'react-device-detect';
 
 
 
@@ -36,11 +39,11 @@ export default function Index() {
                 <img src={BgBanner} className="animated fadeInDown" />
                 <div className="content">
                     <div className="row conteudos">
-                        <div className="col-6 image animated fadeIn">
+                        <div className="col-lg-6 col-md-12 image animated fadeIn">
                             <img src={ImageBanner1} />
                         </div>
                         
-                        <div className="col-6 ">
+                        <div className="col-lg-6 col-md-12 ">
                             <div className="texts">
                                 <span className="cl-light-blue font-48 f-weight-700">
                                     Torne-se um <br />
@@ -58,7 +61,7 @@ export default function Index() {
             <div id="notice">
                 <div className="content">
                     <div className="row">
-                        <div className="col-4">
+                        <div className="col-lg-4 col-md-12">
                             <div className="box">
                                 <img src={ImageNotice1} />
                                 <div className="texts">
@@ -68,7 +71,7 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-lg-4 col-md-12">
                             <div className="box">
                                 <img src={ImageNotice2} />
                                 <div className="texts">
@@ -78,7 +81,7 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-lg-4 col-md-12">
                             <div className="box">
                                 <img src={ImageNotice3} />
                                 <div className="texts">
@@ -94,12 +97,12 @@ export default function Index() {
             <div id="video">
                 <div className="content">
                     <div className="row">
-                        <div className="col-8">
+                        <div className="col-lg-8 col-md-12">
                             <div className="video-box">
                                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HSU5DTvMq0w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
-                        <div className="col-4 texts">
+                        <div className="col-lg-4 col-md-12 texts">
                             <span className="cl-balck font-32 f-weight-700">Quer ter um Super Faturamento extra?</span>
                             <p className="cl-black font-18">É a sua <span className="cl-light-blue">Liberdade Financeira</span> a partir de um serviço que atinge cerca de <b>75% da frota nacional automotiva.</b></p>
                             <Link to="" className="cl-blue border-blue font-16 bt">Seja um representante <img src={ArrowDown} /></Link>
@@ -109,56 +112,94 @@ export default function Index() {
             </div>
 
             <div id="icons">
-                <div className="content">
-                    <div className="row">
-                        <div className="col-4">
-                            <div className="box">
-                                <img src={Icon1} />
+                <BrowserView>
+                    <div className="content">
+                        <div className="row">
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src={Icon1} />
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="col-4">
-                            <div className="box">
-                                <img src={Icon2} />
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src={Icon2} />
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="col-4">
-                            <div className="box">
-                                <img src={Icon3} />
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src={Icon3} />
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="col-4">
-                            <div className="box">
-                                <img src={Icon4} />
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src={Icon4} />
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="col-4">
-                            <div className="box">
-                                <img src={Icon5} />
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src={Icon5} />
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="col-4">
-                            <div className="box">
-                                <img src={Icon6} />
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src={Icon6} />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </BrowserView>
+                <MobileView>
+                    <Carousel     
+                    infinite
+                    centered 
+                    slidesPerPage={2}
+                    >
+                        <div className="box">
+                            <img src={Icon1} />
+                        </div>
+
+                        <div className="box">
+                            <img src={Icon2} />
+                        </div>
+
+                        <div className="box">
+                            <img src={Icon3} />
+                        </div>
+
+                        <div className="box">
+                            <img src={Icon4} />
+                        </div>
+
+                        <div className="box">
+                            <img src={Icon5} />
+                        </div>
+
+                        <div className="box">
+                            <img src={Icon6} />
+                                </div>
+                    </Carousel>
+                </MobileView>
             </div>
 
             <div id="contato">
                 <div className="content">
                     <div className="row">
                         <div className="box col-12 bg-light-blue row no-gutters">
-                            <div className="col-5 texts">
+                            <div className="col-lg-5 col-md-12 texts">
                                 <span className="font-32 cl-white f-weight-700">Cadastre agora mesmo e <br />seja um <span className="cl-yellow">Super Consultor!</span></span>
+                                <BrowserView>
                                 <p className="font-16 cl-white">Nunca foi tão fácil ter seu próprio negócio.Faça agora <br />mesmo o seu cadastro e aumente as suas chances de <br />faturamento. Seja Super!</p>
+                               </BrowserView>
+                               <MobileView>
+                                <p className="font-16 cl-white">Nunca foi tão fácil ter seu próprio negócio.Faça agora mesmo o seu cadastro e aumente as suas chances de faturamento. Seja Super!</p>
+                               </MobileView>
                             </div>
-                            <div className="col-7">
+                            <div className="col-lg-7 col-md-12">
                                 <form method="post" className="row">
                                     <label className="col-12">
                                         <input name="nome" value="" placeholder="Nome Completo" />
