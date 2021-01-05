@@ -1,4 +1,8 @@
 @media screen and (max-width: 750px){
+    body{
+        max-width: 750px;
+        overflow-x: hidden;
+    }
     .content{
         width: 90%;
     }
@@ -283,6 +287,7 @@
     }
 
     #solicite{ 
+        max-width: 750px;
         .left-sr{
             .image {
                 margin-left: 88px;
