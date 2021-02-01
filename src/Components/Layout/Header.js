@@ -15,9 +15,18 @@ import Whatsimage from '../../images/sobre/whats.svg'
 
 import ModalImage from '../../images/modal/image-modal.png'
 
+import ModalCarros from '../../images/modal/carros.png'
+import ModalCasa from '../../images/modal/casa.png'
+import ModalOdonto from '../../images/modal/odonto.png'
+import ModalPet from '../../images/modal/pet.png'
+import ModalSaude from '../../images/modal/saude.png'
+
+import ImageContato from '../../images/icon/Mascote-chat.svg'
+
 export default function Header(){
     const [modalFtActive, setModalFtActive] = useState(false);
     const [modalAssActive, setModalAssActive] = useState(false);
+    const [modalCtActive, setModalCtActive] = useState(false);
 
     return(
         <>
@@ -86,15 +95,19 @@ export default function Header(){
                                 <a href="/representante" className="cl-white n-bt font-16">Seja um representante</a>
                                 <Link onClick={(e) => setModalAssActive(true)} className="cl-white bt border-white">Área do associado <img className="icon" src={ArrowWhite} /></Link>
                                 <Link onClick={(e) => setModalFtActive(true)} className="cl-white bt border-white " ><img className="img-left" src={Star} />Faça sua cotação online</Link> 
-                                <Link className="cl-white bt border-white "><img src={Whatsimage} className="whta" /> Fale conosco</Link>
+                                <a  href="https://api.whatsapp.com/send?phone=551140035542" target="_blank" className="cl-white bt border-white "><img src={Whatsimage} className="whta" /> Fale conosco</a>
                     </Menu>
                 </div>
             </div>
         </header>
         </MobileView>
 
+        <div id="contatos">
+            <a onClick={(e) => setModalCtActive(true)} className="contato-image animated zoomIn"><img src={ImageContato} /></a>
+        </div>
 
-        <Modal modalActive={modalAssActive}>
+
+        <Modal width="wd-600" modalActive={modalAssActive}>
             <div className="row form" id="loginass">
                 <div className="col-12">
                 <button onClick={(e) => setModalAssActive(false)} className="fechar"></button>
@@ -121,7 +134,7 @@ export default function Header(){
 
                 </div>
             </div>
-        </Modal>
+        </Modal> 
 
         <Modal modalActive={modalFtActive}>
             <div id="modal-ini" className="bg-blue">
@@ -143,6 +156,70 @@ export default function Header(){
                         <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
                     </div>
                 </MobileView>
+            </div>
+        </Modal>
+
+        <Modal width="wd-600" modalActive={modalCtActive}>
+            <div id="modal-contatos" className="bg-white" align="left">
+                <button onClick={(e) => setModalCtActive(false)} className="fechar"></button>
+                <span className="font-20 cl-light-blue f-weight-600">Entre em contato e vamos te ajudar :)</span>
+
+                <div className="row box-md no-gutters lines-3">
+                    <div className="col-3">
+                        <img src={ModalCarros} />
+                    </div>
+                    <div className="col-9">
+                        <span className="font-20 cl-light-blue f-weight-600">Super Auto</span>
+                        <p className="font-18 cl-end-gray">Assistência 24h: <a className="cl-black font-18" href="tel:08009402121">0800 940 2121</a></p>
+                        <p className="font-18 cl-end-gray">Assistência 24h: <a className="cl-black font-18" href="tel:08009402121">0800 940 2122</a></p>
+                        <p className="font-18 cl-end-gray">Furto e roubo 24h: <a className="cl-black font-18" href="tel:08007614418">0800 761 4418</a></p>
+                    </div>
+                </div>
+
+                <div className="row box-md no-gutters">
+                    <div className="col-3">
+                        <img src={ModalSaude} />
+                    </div>
+                    <div className="col-9">
+                        <span className="font-18 cl-light-blue f-weight-600">Super Sáude</span>
+                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                    </div>
+                </div>
+
+                <div className="row box-md no-gutters">
+                    <div className="col-3">
+                        <img src={ModalCasa} />
+                    </div>
+                    <div className="col-9">
+                        <span className="font-18 cl-light-blue f-weight-600">Super Residência</span>
+                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                    </div>
+                </div>
+
+                <div className="row box-md no-gutters">
+                    <div className="col-3">
+                        <img src={ModalOdonto} />
+                    </div>
+                    <div className="col-9">
+                        <span className="font-18 cl-light-blue f-weight-600">Super Odonto</span>
+                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                    </div>
+                </div>
+
+                <div className="row box-md no-gutters">
+                    <div className="col-3">
+                        <img src={ModalPet} />
+                    </div>
+                    <div className="col-9">
+                        <span className="font-18 cl-light-blue f-weight-600">Super Pet</span>
+                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                    </div>
+                </div>
+                
             </div>
         </Modal>
 

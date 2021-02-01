@@ -18,8 +18,8 @@
 
 #modal #modalContent{
     position: absolute;
-    left: calc(50% - 300px);
-    width: 600px;
+    left: calc(50% - 365px);
+    width: 730px;
     // background-color: #fff;
     // padding: 1rem;
     margin-bottom: 20px;
@@ -28,9 +28,12 @@
     top: -100vh;
 }
 #modal.active #modalContent{
-    top: 85px;
+    top: 5%;
 }
-
+#modal #modalContent.wd-600{
+    width: 600px;
+    left: calc(50% - 300px);
+}
 #modal #modalContent #modalClose{
     position: absolute;
     font-size: 2rem;
@@ -40,13 +43,68 @@
     cursor: pointer;
 }
 #modal{
-    overflow: hidden;
+    overflow: auto;
+    #modal-contatos{
+        padding: 25px 30px;
+        > span{
+            margin-bottom: 15px;
+            display: block;
+        }
+        .box-md{
+            border: #00ACE2 1px solid;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .box-md:last-child{
+            margin-bottom: 0;
+        }
+        button.fechar{
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            background: none;
+            color: #fff;
+            border: none;
+            z-index: 9;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            outline: none;
+        }
+        button.fechar:after{
+            content: "";
+            background: #00ACE2;
+            transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+            height: 2px;
+            width: 21px;
+            position: absolute;
+            right: 0px;
+            top: 10px;
+        }
+        button.fechar:before{
+            content: "";
+            background: #00ACE2;
+            transform: rotate(45deg);
+            height: 2px;
+            width: 21px;
+            position: absolute;
+            right: 0px;
+            top: 10px;
+        }
+        .lines-3{
+            padding: 10px 0 10px 0;
+        }
+    }
     #modal-ini{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         border-radius: 16px;
+        width: 730px;
         > div{
             width: 100%;
         }
@@ -66,6 +124,10 @@
         color: #fff;
         border: none;
         z-index: 9;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        outline: none;
     }
     button.fechar:after{
         content: "";
@@ -96,11 +158,14 @@
     button.fechar{
         position: absolute;
         right: 25px;
-        top: 20px;
+        top: -30px;
         background: none;
         color: #fff;
         border: none;
         z-index: 9;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
         outline: none;
     }
     button.fechar:after{
@@ -111,7 +176,7 @@
         width: 21px;
         position: absolute;
         right: 0px;
-        top: -35px;
+        top: 9px;
     }
     button.fechar:before{
         content: "";
@@ -121,7 +186,7 @@
         width: 21px;
         position: absolute;
         right: 0px;
-        top: -35px;
+        top: 9px;
     }
     h2{
         color: #fff;

@@ -39,6 +39,7 @@ import bgNaoGreen from '../../images/nao-pedimos/bg-green.svg'
 import bgNaoGreen2 from '../../images/nao-pedimos/bg-green2.svg'
 import bgNaoPontos from '../../images/nao-pedimos/bg-pontos.svg'
 import bgNaoYellow from '../../images/nao-pedimos/bg-yellow.svg'
+import bgNaoYellowM from '../../images/nao-pedimos/bg-yellowM.svg'
 import bgImage from '../../images/sobre/image-analise.png'
 
 import icon1 from '../../images/planos/super-vida/icon1.svg'
@@ -104,7 +105,7 @@ export default function Index() {
                             <div className="footer">
                                 <p className="font-14 cl-gray f-wheight-700">Economia e tranquilidade por apenas</p>
                                 <span className="cl-blue font-32 f-wheight-700 valor">R$ 23,90<span className="font-16 cl-gray f-wheight-500">/mês</span></span>
-                                <Link to="javascript:;" className="bt f-wheight-600  bg-p-blue1 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
+                                <Link to="form-saude" className="bt f-wheight-600  bg-p-blue1 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
                             </div>
                         </div>
                         </ScrollAnimation>
@@ -128,7 +129,7 @@ export default function Index() {
                             <div className="footer">
                                 <p className="font-14 cl-gray f-wheight-700">Economia e tranquilidade por apenas</p>
                                 <span className="cl-blue font-32 f-wheight-700 valor">R$ 29,90<span className=" font-16 cl-gray f-wheight-500">/mês</span></span>
-                                <Link to="javascript:;" className="bt f-wheight-600  bg-p-blue2 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
+                                <Link to="form-saude" className="bt f-wheight-600  bg-p-blue2 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
                             </div>
                         </div>
                         </ScrollAnimation>
@@ -154,7 +155,7 @@ export default function Index() {
                             <div className="footer">
                                 <p className="font-14 cl-gray f-wheight-700">Economia e tranquilidade por apenas</p>
                                 <span className="cl-blue font-32 f-wheight-700 valor">R$ 34,90<span className="font-16 cl-gray f-wheight-500">/mês</span></span>
-                                <Link to="javascript:;" className="bt f-wheight-600  bg-p-blue3 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
+                                <Link to="form-saude" className="bt f-wheight-600  bg-p-blue3 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
                             </div>
                         </div>
                         </ScrollAnimation>
@@ -394,7 +395,7 @@ export default function Index() {
                                     <div className="col-lg-6 col-md-12">
                                         <span className="cl-gray font-40">Super <span className="cl-blue f-weight-700" > Pet</span></span>
                                         <p className="cl-gray font-18">Seu amigo merece os<br /> <b>melhores benefícios!</b></p>
-                                        <Link to="form-casa" className="cl-white bg-light-blue font-18 bt">Saiba mais <img src={ArrowYellow} /></Link>
+                                        <Link to="form-pet" className="cl-white bg-light-blue font-18 bt">Saiba mais <img src={ArrowYellow} /></Link>
                                     </div>
                                 </div>
                             </div>
@@ -445,8 +446,8 @@ export default function Index() {
 
                         <div className="col-lg-8 col-md-12 left-sr left-srot">
                             <ScrollAnimation animateOnce animateIn='fadeIn'>
-                                <img className="image" src={bgImage} />
-                                <img className="bg-slyellow" src={bgNaoYellow} />
+                                <img className="image image-sobre" src={bgImage} />
+                                <img className="bg-slyellow" src={bgNaoYellowM} />
                             </ScrollAnimation>
                             <ScrollAnimation animateOnce animateIn='fadeInRight'>
                                 <img className="bg-green2" src={bgNaoGreen2} />
@@ -474,10 +475,11 @@ export default function Index() {
                 <img src={ModalImage} />
                 <BrowserView>
                     <div className="buttons">
-                        <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
+                        <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
                         <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
                         <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
                         <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                        <Link to="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</Link>
                     </div>
                 </BrowserView>
                 <MobileView>
@@ -486,6 +488,7 @@ export default function Index() {
                         <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
                         <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
                         <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
+                        <a href="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</a>
                     </div>
                 </MobileView>
             </div>

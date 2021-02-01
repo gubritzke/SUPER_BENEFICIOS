@@ -2,6 +2,9 @@
 
 #credenciados{
     background: #F5F5F5;
+    .form-dpn{
+        display: none;
+    }
     #head{
         background: #00309e;
         height: 110px;
@@ -13,6 +16,12 @@
         padding-top: 15px;
         position: relative;
         .left-form{
+            span.txt-odonto{
+                line-height: 139%;
+                display: block;
+                margin-bottom: 16px;
+                margin-top: 30px;
+            }
             .carousel{
                 margin-bottom: 20px;
                 display: block;
@@ -97,12 +106,17 @@
                 }
             }
             .image-auto{
-                margin-top: -15px;
+                margin-top: 0;
             }
             .image-saude{
                 position: absolute;
                 bottom: -95px;
                 right: -285px;
+            }
+            .image-dental{
+                position: absolute;
+                bottom: -95px;
+                right: -290px;
             }
             .image-casa{
                 position: absolute;
@@ -112,7 +126,7 @@
             .image-pet{
                 position: absolute;
                 bottom: -95px;
-                right: -140px;
+                right: 0px;
             }
         }
         .form{

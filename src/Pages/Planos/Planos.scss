@@ -311,16 +311,74 @@
     }
 }
 
+
+#super-odonto{
+    #banner{
+        > img{
+            position: absolute;
+            top: 0;
+            left: calc(50% - 960px);
+            width: 100%;
+            max-width: 1920px;
+            min-width: 1920px;
+        }
+        .conteudos{
+            > div{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .img{
+                margin-top: 300px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    #vantavida{
+        margin-top: -45px;
+        .title{
+            margin-bottom: 75px;
+            display: block;
+        }
+        .line{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 65px;
+        }
+        .line2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 65px;
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+            .obj1{
+                position: absolute;
+                left: -160px;
+                bottom: 35px;
+            }
+            .obj2{
+                position: absolute;
+                right: -160px;
+                bottom: 35px;
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width: 750px){
     #super-auto{
         #banner{
             > img{
                 left: -840px;
+                display: none;
             }
             .conteudos{
                 .img{
                     display: block;
-                    margin: 400px auto 0 auto;
+                    margin: 100px auto 0 auto;
                     width: 600px;
                 }
                 .imgmap {
@@ -356,11 +414,12 @@
         #banner{
             > img{
                 left: -840px;
+                display: none;
             }
             .conteudos{
                 .img{
                     display: block;
-                    margin: 400px auto 0 auto;
+                    margin: 100px auto 0 auto;
                     width: 600px;
                 }
                 .imgmap {

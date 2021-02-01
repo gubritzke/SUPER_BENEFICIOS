@@ -254,7 +254,19 @@ input, button, textarea{
     }
 
 }
-
+#contatos{
+    .contato-image{
+        position: fixed;
+        right: 60px;
+        bottom: 100px;
+        z-index: 7;
+        cursor: pointer;
+        img{
+            width: 125px;
+            
+        }
+    }
+}
 /* FOOTER */
 #footer{
     &.active{

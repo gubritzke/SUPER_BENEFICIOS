@@ -16,7 +16,7 @@ export default function  Modal(props){
 
     return (
         <div id="modal" className={active}>
-            <div id="modalContent">
+            <div id="modalContent" className={props.width}>
                 {/* <div id="modalClose" onClick={() => setModalActive(null)}><Icon icon={closeIcon} /></div> */}
                 {props.children}
             </div>

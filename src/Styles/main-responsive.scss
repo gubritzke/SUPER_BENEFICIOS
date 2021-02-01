@@ -265,7 +265,7 @@
     #footer #footer-1 {
         background-color: #F5F5F5;
         padding: 55px 0;
-        z-index: 7;
+        z-index: 6;
         position: relative;
     }
     
@@ -290,8 +290,19 @@
         max-width: 750px;
         .left-sr{
             .image {
-                margin-left: 88px;
+                margin-left: 84px;
                 margin-bottom: -70px;
+            }
+            .image-sobre{
+                margin-left: -64px;
+            }
+            .bg-slyellow{
+                left: 0;
+                top: -200px;
+                width: 726px;
+            }
+            .bg-green2{
+                display: none;
             }
         }
         .left-srot{
@@ -360,5 +371,19 @@
         height: 5px;
         width: 45px;
         margin-top: 15px;
+    }
+    #modal #modalContent.wd-600{
+        width: 730px;
+        left: calc(50% - 365px);
+        img{
+            width: 100%;
+        }
+    }
+    #contatos .contato-image{
+        right: 50px;
+        bottom: 130px;
+        img{
+            width: 180px;
+        }
     }
 }

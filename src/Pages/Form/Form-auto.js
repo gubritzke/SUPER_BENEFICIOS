@@ -56,7 +56,7 @@ export default function Index() {
                                 <img src={IconA12} />
                             </Carousel>
                             </div>
-                            <Link className="bt border-white font-16 cl-white">Veja mais informações</Link>
+                            <Link to="super-auto" className="bt border-white font-16 cl-white">Veja mais informações</Link>
                             <img className="image-auto" src={ImageAuto} />
                         </div>
                         <div className="col-lg-6 col-md-12">

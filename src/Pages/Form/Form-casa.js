@@ -21,11 +21,11 @@ import IconS7 from '../../images/forms/Icons-7.svg'
 import IconS8 from '../../images/forms/Icons-8.svg'
 import IconS9 from '../../images/forms/Icons-9.svg'
 import Image from '../../images/forms/image-casa.png'
-import Logo from '../../images/forms/logo-vida.svg'
+import Logo from '../../images/forms/logo-residencia.svg'
 
 import InputMask from 'react-input-mask';
 
-
+ 
 export default function Index() {
 
     const [stepLoad, setstepLoad] = useState(false)
@@ -82,7 +82,7 @@ export default function Index() {
                     <div className="row">
                         <div className="col-lg-6 col-md-12 left-form" >
                             <div className="text">
-                                <div className="breve bg-yellow cl-black font-16 f-weight-700">
+                                <div className="breve bg-yellow cl-black font-16 f-weight-700 form-dpn">
                                     <span>Em <br />
                                     breve!</span>
                                 </div>
@@ -109,19 +109,19 @@ export default function Index() {
                                 <div className="col-12 row no-gutters">
                                     <form className="col-12 row no-gutters" method="post" onSubmit={handleSend}>
                                         <div className="col-12">
-                                            <input type="text" value={camposFormulario.nome} onChange={(e) => changeInputMult(e)} name="nome" placeholder="Nome completo"/>
+                                            <input type="text" required value={camposFormulario.nome} onChange={(e) => changeInputMult(e)} name="nome" placeholder="Nome completo"/>
                                         </div>
 
                                         <div className="col-12">
-                                        <InputMask mask="(99) 99999-9999"  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
+                                        <InputMask mask="(99) 99999-9999" required  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
                                         </div>
                                         
                                         <div className="col-12" align="right">
-                                            <input type="text" name="email" value={camposFormulario.email} onChange={(e) => changeInputMult(e)} placeholder="E-mail" />
+                                            <input type="text" name="email" required value={camposFormulario.email} onChange={(e) => changeInputMult(e)} placeholder="E-mail" />
                                         </div>
 
                                         <div className="col-12">
-                                            <textarea placeholder="Mensagem" value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)} name="mensagem">
+                                            <textarea placeholder="Mensagem" required value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)} name="mensagem">
                                                 Mensagem
                                             </textarea>
                                         </div>

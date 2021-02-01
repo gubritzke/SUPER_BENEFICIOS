@@ -107,7 +107,7 @@ export default function Index() {
                                 <img src={IconS9} />
                             </Carousel>
                             </div>
-                            <Link className="bt border-white font-16 cl-white inf-saude">Veja mais informações</Link>
+                            <Link to="super-vida" className="bt border-white font-16 cl-white inf-saude">Veja mais informações</Link>
                             <BrowserView>
                                 <img className="image-saude" src={Image} />
                             </BrowserView>
@@ -124,7 +124,7 @@ export default function Index() {
                                 <div className="col-12 row no-gutters">
                                     <form className="col-12 row " onSubmit={handleSend} method="post">
                                         <div className="col-12">
-                                            <select name="plano" onChange={(e) => changeInputMult(e)} >
+                                            <select name="plano" required onChange={(e) => changeInputMult(e)} >
                                                 <option value="">Plano</option>
                                                 <option value="Super Essencial | 23,90/mensais">Super Essencial | 23,90/mensais</option>
                                                 <option value="Super Saude+ | 29,90/mensais">Super Saude+ | 29,90/mensais</option>
@@ -132,19 +132,19 @@ export default function Index() {
                                             </select>
                                         </div>
                                         <div className="col-12">
-                                            <input type="text" value={camposFormulario.nome} onChange={(e) => changeInputMult(e)}  name="nome" placeholder="Nome completo"/>
+                                            <input type="text" required value={camposFormulario.nome} onChange={(e) => changeInputMult(e)}  name="nome" placeholder="Nome completo"/>
                                         </div>
 
                                         <div className="col-lg-6 col-md-12">
-                                            <InputMask mask="(99) 99999-9999"  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
+                                            <InputMask mask="(99) 99999-9999" required  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
                                         </div>
                                         
                                         <div className="col-lg-6 col-md-12" align="right">
-                                            <input type="text" value={camposFormulario.email} onChange={(e) => changeInputMult(e)}  name="email" placeholder="E-mail" />
+                                            <input type="text" required value={camposFormulario.email} onChange={(e) => changeInputMult(e)}  name="email" placeholder="E-mail" />
                                         </div>
 
                                         <div className="col-12">
-                                            <textarea value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)}  name="mensagem" placeholder="Mensagem">
+                                            <textarea value={camposFormulario.mensagem} required onChange={(e) => changeInputMult(e)}  name="mensagem" placeholder="Mensagem">
                                                 Mensagem
                                             </textarea>
                                         </div>

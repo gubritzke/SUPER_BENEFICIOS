@@ -65,8 +65,9 @@
 @media screen and (max-width: 750px){
     #sobre{
         #banner{
-            img{
+            > img{
                 left: -808px;
+                display: none;
             }
             .conteudos{
                 .imgmap {

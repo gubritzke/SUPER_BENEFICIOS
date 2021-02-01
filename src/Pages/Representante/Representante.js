@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import Modal from '../../Components/Modal/index';
 
+import Scrollchor from 'react-scrollchor';
+
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
+
+import InputMask from 'react-input-mask';
 
 import './Representante.scss';
 
@@ -25,6 +28,9 @@ import Icon4 from '../../images/representantes/icon-4.png'
 import Icon5 from '../../images/representantes/icon-5.png'
 import Icon6 from '../../images/representantes/icon-6.png'
 
+import swal from 'sweetalert';
+import { api } from '../../Api/app'
+
 
 import ArrowDown from '../../images/representantes/arrow-down.svg'
 import { BrowserView, MobileView } from 'react-device-detect';
@@ -32,6 +38,50 @@ import { BrowserView, MobileView } from 'react-device-detect';
 
 
 export default function Index() {
+
+    const [stepLoad, setstepLoad] = useState(false)
+    const [camposFormulario, setCamposFormularios] = useState({
+        nome: '',
+        telefone: '',
+        email: '',
+        mensagem: '',
+    })
+
+    async function handleSend(event)
+    {
+
+        event.preventDefault()
+
+        var data = camposFormulario
+
+        setstepLoad(true)
+
+             var response =  await api.post('/form-consultor', data)
+
+            if  ( response.data.error == true){
+                alert( response.data.message )
+            }  else {
+                swal("Enviado com sucesso!");
+            }
+
+            setTimeout(function(){
+                setstepLoad(false)
+            })
+
+        console.log( response )
+
+    }
+
+    function changeInputMult(e)
+    {
+
+        var meusdados = camposFormulario
+        meusdados[e.target.name] = e.target.value
+        setCamposFormularios({...meusdados})
+
+        console.log( meusdados )
+
+    }
 
     return (
         <div id="Representante">
@@ -99,13 +149,13 @@ export default function Index() {
                     <div className="row">
                         <div className="col-lg-8 col-md-12">
                             <div className="video-box">
-                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HSU5DTvMq0w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z-Brwo4js0I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-12 texts">
                             <span className="cl-balck font-32 f-weight-700">Quer ter um Super Faturamento extra?</span>
                             <p className="cl-black font-18">É a sua <span className="cl-light-blue">Liberdade Financeira</span> a partir de um serviço que atinge cerca de <b>75% da frota nacional automotiva.</b></p>
-                            <Link to="" className="cl-blue border-blue font-16 bt">Seja um representante <img src={ArrowDown} /></Link>
+                            <Scrollchor to="#contatoa" className="cl-blue border-blue font-16 bt">Seja um representante <img src={ArrowDown} /></Scrollchor>
                         </div>
                     </div>
                 </div>
@@ -186,6 +236,7 @@ export default function Index() {
                 </MobileView>
             </div>
 
+            <div id="contatoa"></div>
             <div id="contato">
                 <div className="content">
                     <div className="row">
@@ -200,18 +251,18 @@ export default function Index() {
                                </MobileView>
                             </div>
                             <div className="col-lg-7 col-md-12">
-                                <form method="post" className="row">
+                                <form method="post" className="row" onSubmit={handleSend}>
                                     <label className="col-12">
-                                        <input name="nome" value="" placeholder="Nome Completo" />
+                                        <input required value={camposFormulario.nome} onChange={(e) => changeInputMult(e)} name="nome" placeholder="Nome Completo" />
                                     </label>
                                     <label className="col-6">
-                                        <input name="nome" value="" placeholder="Email" />
+                                        <input required value={camposFormulario.email} onChange={(e) => changeInputMult(e)} name="email" placeholder="Email" />
                                     </label>
-                                    <label className="col-6">
-                                        <input name="nome" value="" placeholder="Telefone" />
+                                    <label  className="col-6">
+                                        <InputMask mask="(99) 99999-9999" required  type="text" value={camposFormulario.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="Telefone" />
                                     </label>
                                     <label className="col-12">
-                                        <textarea name="nome" value="" placeholder="Mensagem"></textarea>
+                                        <textarea required value={camposFormulario.mensagem} onChange={(e) => changeInputMult(e)} name="mensagem" placeholder="Mensagem"></textarea>
                                     </label>
                                     
                                     <label className="col-12" align="right">
