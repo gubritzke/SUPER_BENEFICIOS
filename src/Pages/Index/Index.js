@@ -165,11 +165,11 @@ export default function Index() {
                             </ScrollAnimation>
 
                             <ScrollAnimation className="col-lg-4 col-md-12" animateIn='fadeIn'>
-                                <a href="/form-auto" className="box">
+                                <a href="/form-saude" className="box">
                                     <img src={Prod6}></img>
                                     <span className="produto cl-gray font-28">Super <span className="cl-blue font-28">Saúde</span></span>
                                     <span className="cl-gray font-16 font-p-mobal1">Planos a partir de</span>
-                                    <span className="cl-blue font-32 f-weight-700 font-p-mobal">R$ 23,90<span className="cl-gray font-16 f-weight-400">/mensais</span></span>
+                                    <span className="cl-blue font-32 f-weight-700 font-p-mobal">R$ 29,90<span className="cl-gray font-16 f-weight-400">/mensais</span></span>
                                     <Link to="form-saude" className="bg-light-blue cl-white bt font-18">Cotação Online <img className="icon" src={ArrowYellow} /></Link>
                                     <MobileView>
                                         <div className="line-bottom bg-green">

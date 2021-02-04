@@ -76,22 +76,22 @@ export default function Footer(){
                                 <Link to="/representante" className="bt border-blue cl-blue f-weight-700 font-14"><img src={IconPlus} />Seja um representante</Link>
                                 <a href="https://api.whatsapp.com/send?phone=551140035542" target="_blank" className="bt border-blue cl-blue f-weight-700 font-14"><img src={Whatsapp} />Associe-se pelo WhatsApp</a>
                             </div>
-                            <div className="col-lg-2 col-md-12 ft-redes">
-                                <Link to=""><img src={Facebook} /></Link>
-                                <Link to=""><img src={Instagram} /></Link>
+                            <div className="col-lg-1 col-md-12 ft-redes">
+                                <a href="https://www.facebook.com/superbeneficios" target="_blank"><img src={Facebook} /></a>
+                                <a href="https://www.instagram.com/superbeneficios/" target="_blank"><img src={Instagram} /></a>
                             </div>
-                            <div className="col-lg-5 col-md-12 ft-contatos" align="left">
+                            <div className="col-lg-6 col-md-12 ft-contatos" align="left">
                                 <BrowserView>
-                                    <p className="cl-black f-weight-700">Central de vendas: <Link className="cl-blue f-weight-400">4003 5542 </Link></p>
-                                    <p className="cl-black f-weight-700">Atendimento ao Associado: <Link className="cl-blue f-weight-400">4003 5548 </Link></p>
-                                    <p className="cl-black f-weight-700">Assistência 24h: <Link className="cl-blue f-weight-400">0800 940 2121</Link> | Furto e roubo 24h: <Link className="cl-blue f-weight-400">0800 761 4418</Link> </p>
+                                    <p className="cl-black f-weight-700">Central de vendas: <a className="cl-blue f-weight-400" href="tel:40035542">4003 5542 </a></p>
+                                    <p className="cl-black f-weight-700">Atendimento ao Associado: <a className="cl-blue f-weight-400" href="tel:40035548">4003 5548 </a></p>
+                                    <p className="cl-black f-weight-700">Assistência 24h: <a className="cl-blue f-weight-400" href="tel:08009402121">0800 940 2121</a> | Furto e roubo 24h: <a className="cl-blue f-weight-400" href="tel:08007614418">0800 761 4418</a> </p>
                                 </BrowserView>
 
                                 <MobileView>
-                                    <p className="cl-black f-weight-700">Central de vendas: <Link className="cl-blue f-weight-400">4003 5542 </Link></p>
-                                    <p className="cl-black f-weight-700">Atendimento ao Associado: <Link className="cl-blue f-weight-400">4003 5548 </Link></p>
-                                    <p className="cl-black f-weight-700">Assistência 24h: <Link className="cl-blue f-weight-400">0800 940 2121</Link></p>
-                                    <p className="cl-black f-weight-700"> Furto e roubo 24h: <Link className="cl-blue f-weight-400">0800 761 4418 </Link></p>
+                                    <p className="cl-black f-weight-700">Central de vendas: <a className="cl-blue f-weight-400" href="tel:40035542">4003 5542 </a></p>
+                                    <p className="cl-black f-weight-700">Atendimento ao Associado: <a className="cl-blue f-weight-400" href="tel:40035548">4003 5548 </a></p>
+                                    <p className="cl-black f-weight-700">Assistência 24h: <a className="cl-blue f-weight-400" href="tel:08009402121">0800 940 2121</a></p>
+                                    <p className="cl-black f-weight-700"> Furto e roubo 24h: <a className="cl-blue f-weight-400" href="tel:08007614418">0800 761 4418 </a></p>
                                 </MobileView>
                             </div>
                         </div>

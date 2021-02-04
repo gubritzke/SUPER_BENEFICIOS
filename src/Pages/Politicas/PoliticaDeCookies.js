@@ -50,7 +50,6 @@ export default function Index() {
                     <div className="content">
                         <div className="line-menu">
                             <Link to="/politica-de-privacidade" className="bt border-white cl-white font-16">Política de privacidade</Link>
-                            <Link to="/politica-de-cookies" className="bt border-white cl-white font-16">Política de Cookies</Link>
                             <Link to="/como-usamos-seus-dados" className="bt border-white cl-white font-16">Como usamos seus dados?</Link>
                         </div>
                     </div>

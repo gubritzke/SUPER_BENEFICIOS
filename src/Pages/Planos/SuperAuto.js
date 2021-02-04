@@ -26,8 +26,8 @@ import bgNaoYellowM from '../../images/nao-pedimos/bg-yellowM.svg'
 import bgImage from '../../images/sobre/image-analise.png'
 
 import Prod1 from '../../images/produtos/moto.png'
-import Prod3 from '../../images/produtos/carro.png'
-import Prod6 from '../../images/produtos/suv.png'
+import Prod3 from '../../images/planos/super-auto/image-carro.png'
+import Prod6 from '../../images/planos/super-auto/image-suv.png'
 
 import icon1 from '../../images/planos/super-auto/icon1.svg'
 import icon2 from '../../images/planos/super-auto/icon2.svg'

@@ -112,7 +112,7 @@ export default function Header(){
                 <div className="col-12">
                 <button onClick={(e) => setModalAssActive(false)} className="fechar"></button>
                     
-                    <form action="https://orion.hinova.com.br/sga/area/4.1/login.action.php" method="post" >
+                    <form action="https://taiga.hinova.com.br/sga/area/4.1/login.action.php" method="post" >
                         <h2 class="uk-modal-title uk-heading-line uk-text-center">Área do Associado SUPER</h2>
                         <div class="uk-margin">
                             <div class="uk-inline uk-width-1-1">
@@ -126,7 +126,7 @@ export default function Header(){
                                 <input class="uk-input  uk-width-1-1" type="password" name="dfsSenha" id="dfsSenha" placeholder="Senha" />
                             </div>
                         </div>
-                        <input type="hidden" name="dfsChave" id="dfsChave" value="cb2404021e853208529154e71c9cbba62087f75c2a4f6012aac868ea0719267133f49d21748b3de47b3e691ee1420a5e98e820debc949c59c039f7c29cbdc5b7" /> 
+                        <input type="hidden" name="dfsChave" id="dfsChave" value="33503858d3ccc8a4d3dcaa4987f92b2791cf03ba3be5328c9107fdd2adf8da361aa60731d8e96cc9dc05c2adf8e99d564a38e60575d7d6253b7ea6e66418a44a" /> 
                         <div class="uk-margin">
                             <input type="submit" name="pbEntrar" value="Entrar" class="uk-button uk-button-primary uk-width-1-1" />
                         </div>
@@ -142,10 +142,11 @@ export default function Header(){
                 <img src={ModalImage} />
                 <BrowserView>
                     <div className="buttons">
-                        <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
+                        <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
                         <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
                         <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
                         <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                        <Link to="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</Link>
                     </div>
                 </BrowserView>
                 <MobileView>
@@ -154,6 +155,7 @@ export default function Header(){
                         <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
                         <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
                         <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
+                        <a href="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</a>
                     </div>
                 </MobileView>
             </div>
@@ -182,12 +184,11 @@ export default function Header(){
                     </div>
                     <div className="col-9">
                         <span className="font-18 cl-light-blue f-weight-600">Super Sáude</span>
-                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
-                        <p className="font-16 cl-end-gray">Label: <a className="cl-black font-16" href="">0800 xxx xxxx</a></p>
+                        <p className="font-16 cl-end-gray">Assistência 24h: <a className="cl-black font-16" href="tel:08006002853">0800 600 2853</a></p>
                     </div>
                 </div>
 
-                <div className="row box-md no-gutters">
+                <div className="row box-md no-gutters desk-none mb-none">
                     <div className="col-3">
                         <img src={ModalCasa} />
                     </div>
@@ -198,7 +199,7 @@ export default function Header(){
                     </div>
                 </div>
 
-                <div className="row box-md no-gutters">
+                <div className="row box-md no-gutters desk-none mb-none">
                     <div className="col-3">
                         <img src={ModalOdonto} />
                     </div>
@@ -209,7 +210,7 @@ export default function Header(){
                     </div>
                 </div>
 
-                <div className="row box-md no-gutters">
+                <div className="row box-md no-gutters desk-none mb-none">
                     <div className="col-3">
                         <img src={ModalPet} />
                     </div>

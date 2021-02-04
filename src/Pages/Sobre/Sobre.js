@@ -45,10 +45,15 @@ export default function Index() {
                                 <b>deixamos sua vida mais fácil!</b>
                             </span>
                             <p className="font-16 cl-black">
-                                A <b>Super Benefícios</b> visa entregar aos seus associados os <b>melhores benefícios nas mais diversas áreas,</b> proporcionando segurança, facilidades e vantagens financeiras, que resultarão em <b>mais economia, tempo e qualidade de vida.</b>
-                                <br />
-                                <br />
-                                Com <b>inovação, busca por excelência no atendimento e gestão, foco e senso de urgência e de valor,</b> almejamos, muito em breve, sermos reconhecidos como a maior Plataforma Digital de Proteção e Benefícios.
+                                A Super Benefícios é hoje uma das maiores plataformas digitais de Proteção e Benefícios do Brasil. Com milhares de associados, nós garantimos proteção completa para você e sua família em todo território nacional!
+                                <br /><br />
+                                Proteger a sua família de forma integral é o nosso compromisso. Contamos com planos de proteção residencial, saúde, pet e veicular. E o melhor, tudo isso em um só lugar, com valores acessíveis, que cabem no seu bolso.
+                                <br /><br />
+                                A inovação e a busca constante pela excelência no atendimento e gestão, são o norte do nosso negócio. O senso de urgência, a geração de valor e o cuidado com os nossos associados se faz presente em todas as  nossas ações.
+                                <br /><br />
+                                Atendimento humanizado para você e quem você ama 24 horas por dia, nos 365 dias do ano. E tem mais! Todos os nossos associados contam com uma plataforma de descontos com os maiores e-commerces, farmácias, restaurantes, faculdades e muito mais. 
+                                <br /><br />
+                                Vem ser Super!
                             </p>
                         </div>
                         <BrowserView>

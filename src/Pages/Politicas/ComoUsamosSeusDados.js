@@ -50,7 +50,6 @@ export default function Index() {
                     <div className="content">
                         <div className="line-menu">
                             <Link to="/politica-de-privacidade" className="bt border-white cl-white font-16">Política de privacidade</Link>
-                            <Link to="/politica-de-cookies" className="bt border-white cl-white font-16">Política de Cookies</Link>
                             <Link to="/como-usamos-seus-dados" className="bt border-white cl-white font-16">Como usamos seus dados?</Link>
                         </div>
                     </div>
@@ -74,10 +73,7 @@ export default function Index() {
                         <span className="font-18 cl-light-blue font-weight-800">E-mail</span>
                         <p className="font-18 cl-gray font-weight-500">Utilizamos seu e-mail para o envio de comunicações relativas ao andamento da sua cotação e também para ofertas de produtos.</p>
                         <br />
-                        <span className="font-18 cl-light-blue font-weight-800">Dados do veículo</span>
-                        <p className="font-18 cl-gray font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida placerat nisl sit amet rhoncus. Ut semper arcu mollis felis luctus vehicula ac egestas lacus</p>
                         <br />
-
                     </div>
                 </div>
             </div>
