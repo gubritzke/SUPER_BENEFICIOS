@@ -184,7 +184,7 @@ export default function Header(){
                     </div>
                     <div className="col-9">
                         <span className="font-18 cl-light-blue f-weight-600">Super Sáude</span>
-                        <p className="font-16 cl-end-gray">Assistência 24h: <a className="cl-black font-16" href="tel:08006002853">0800 600 2853</a></p>
+                        <p className="font-16 cl-end-gray">Atendimento 24h: <a className="cl-black font-16" href="tel:08006002853">0800 600 2853</a></p>
                     </div>
                 </div>
 
