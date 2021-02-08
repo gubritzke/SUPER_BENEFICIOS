@@ -104,7 +104,7 @@ export default function Index() {
                             </div>
                             <div className="footer">
                                 <p className="font-14 cl-gray f-wheight-700">Economia e tranquilidade por apenas</p>
-                                <span className="cl-blue font-32 f-wheight-700 valor">R$ 23,90<span className="font-16 cl-gray f-wheight-500">/mês</span></span>
+                                <span className="cl-blue font-32 f-wheight-700 valor">R$ 29,90<span className="font-16 cl-gray f-wheight-500">/mês</span></span>
                                 <Link to="form-saude" className="bt f-wheight-600  bg-p-blue1 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ export default function Index() {
                             </div>
                             <div className="footer">
                                 <p className="font-14 cl-gray f-wheight-700">Economia e tranquilidade por apenas</p>
-                                <span className="cl-blue font-32 f-wheight-700 valor">R$ 29,90<span className=" font-16 cl-gray f-wheight-500">/mês</span></span>
+                                <span className="cl-blue font-32 f-wheight-700 valor">R$ 34,90<span className=" font-16 cl-gray f-wheight-500">/mês</span></span>
                                 <Link to="form-saude" className="bt f-wheight-600  bg-p-blue2 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
                             </div>
                         </div>
@@ -154,7 +154,7 @@ export default function Index() {
                             </div>
                             <div className="footer">
                                 <p className="font-14 cl-gray f-wheight-700">Economia e tranquilidade por apenas</p>
-                                <span className="cl-blue font-32 f-wheight-700 valor">R$ 34,90<span className="font-16 cl-gray f-wheight-500">/mês</span></span>
+                                <span className="cl-blue font-32 f-wheight-700 valor">R$ 39,90<span className="font-16 cl-gray f-wheight-500">/mês</span></span>
                                 <Link to="form-saude" className="bt f-wheight-600  bg-p-blue3 cl-white font-18">Solicitar Cartão <img src={ArrowYellow} /></Link>
                             </div>
                         </div>

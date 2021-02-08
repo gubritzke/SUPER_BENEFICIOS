@@ -126,9 +126,9 @@ export default function Index() {
                                         <div className="col-12">
                                             <select name="plano" required onChange={(e) => changeInputMult(e)} >
                                                 <option value="">Plano</option>
-                                                <option value="Super Essencial | 23,90/mensais">Super Essencial | 23,90/mensais</option>
-                                                <option value="Super Saude+ | 29,90/mensais">Super Saude+ | 29,90/mensais</option>
-                                                <option value="Super Premium | 34,90/mensais">Super Premium | 34,90/mensais</option>
+                                                <option value="Super Essencial | 29,90/mensais">Super Essencial | 29,90/mensais</option>
+                                                <option value="Super Saude+ | 34,90/mensais">Super Saude+ | 34,90/mensais</option>
+                                                <option value="Super Premium | 39,90/mensais">Super Premium | 39,90/mensais</option>
                                             </select>
                                         </div>
                                         <div className="col-12">

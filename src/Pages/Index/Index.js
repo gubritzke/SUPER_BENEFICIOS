@@ -78,14 +78,15 @@ export default function Index() {
                     <div className="row no-gutters">
                         <div className="col-5 texto-banner">
                             <span className="font-48 f-weight-500 cl-white">
-                                Conte com<br /> 
-                                <span className="cl-yellow f-weight-500">Cobertura 24h<br />
-                                em todo o Brasil!</span>
+                                <span className="cl-yellow f-weight-500">
+                                    Proteção Integral <br />24h em todo Brasil!
+                               </span>
                             </span>
                             <p className="font-24 cl-white">
-                                Estamos online para te <br />
-                                atender, através do nosso <br />
-                                canal 0800!
+                                Proteja o que realmente importa <br />
+                                para você. Sua família, sua casa, <br />
+                                seu carro, sua saúde. E o melhor <br />
+                                tudo em um só lugar. 
                             </p>
                             <a href="https://api.whatsapp.com/send?phone=551140035542" target="_blank" className="bt border-white cl-white font-16">ou fale conosco no WhatsApp <img className="icon" src={ArrowWhite} /></a>
                         </div>
@@ -101,15 +102,17 @@ export default function Index() {
                     <div className="row no-gutters">
                         <div className="col-12 texto-banner">
                         <span className="font-48 f-weight-500 cl-white">
-                                Conte com<br /> 
-                                <span className="cl-yellow f-weight-500">Cobertura <br /> 
-                                24h em todo <br /> o Brasil!</span>
+                            <span className="cl-yellow f-weight-500">
+                                    Proteção Integral <br />24h em todo Brasil!
+                               </span>
                             </span>
                             <p className="font-24 cl-white">
-                                Estamos online para <br /> 
-                                te atender, através <br /> 
-                                do nosso canal:<br />
-                                 <b>0800 940 2121</b>
+                                Proteja o que realmente <br />
+                                importa para você. <br />Sua família,
+                                sua casa, <br />seu carro, sua saúde. <br />
+                                E o melhor tudo <br />em um só lugar. 
+                                <br />
+                                <br />
                             </p>
                             <a href="https://api.whatsapp.com/send?phone=551140035542" target="_blank" className="bt border-white cl-white font-16">ou fale por WhatsApp <img className="icon" src={ArrowWhite} /></a>
                         </div>
