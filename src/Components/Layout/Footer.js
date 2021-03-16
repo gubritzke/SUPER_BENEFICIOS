@@ -12,6 +12,7 @@ import Whatsapp from '../../images/icon/whatsapp.svg'
 
 import Instagram from '../../images/icon/instagram.svg'
 import Facebook from '../../images/icon/facebook.svg'
+import Cookies from '../../images/icon/cookies.svg'
 
 import Star from '../../images/sobre/star.svg'
 import Whatsimage from '../../images/sobre/whats.svg'
@@ -21,6 +22,8 @@ import Modal from '../Modal/index';
 import ModalImage from '../../images/modal/image-modal.png'
 import { BrowserView, MobileView } from 'react-device-detect';
 
+import Heart from '../../images/icon/coracao-garante.svg'
+
 
 export default function Footer(){
 
@@ -28,6 +31,20 @@ export default function Footer(){
 
     const [modalAssActive, setModalAssActive] = useState(false);
     const [modalFtActive, setModalFtActive] = useState(false);
+
+    const [modalLGPD, setModalLGPD] = useState(true);
+    const [activeLGPD, setActiveLGPD] = useState(null);
+
+    useEffect(()=>{
+        if(!window.localStorage.getItem('LGPD')){
+            setModalLGPD(true)
+            if (modalLGPD === true ) {
+                setActiveLGPD('active')
+            } else {
+                setActiveLGPD(null)
+            }
+        }
+    },[])
 
     return(
         <footer id="footer" className={window.location.href == window.location.origin + "/desconto" ? 'active' : ' '} >
@@ -82,15 +99,18 @@ export default function Footer(){
                             </div>
                             <div className="col-lg-6 col-md-12 ft-contatos" align="left">
                                 <BrowserView>
-                                    <p className="cl-black f-weight-700">Central de vendas: <a className="cl-blue f-weight-400" href="tel:40035542">4003 5542 </a></p>
+                                    <p className="cl-black f-weight-700">Central de Cotação / Adesão: <a className="cl-blue f-weight-400" href="tel:40035542">4003 5542 </a></p>
                                     <p className="cl-black f-weight-700">Atendimento ao Associado: <a className="cl-blue f-weight-400" href="tel:40035548">4003 5548 </a></p>
-                                    <p className="cl-black f-weight-700">Assistência 24h: <a className="cl-blue f-weight-400" href="tel:08009402121">0800 940 2121</a> | Furto e roubo 24h: <a className="cl-blue f-weight-400" href="tel:08007614418">0800 761 4418</a> </p>
+                                    <p className="cl-black f-weight-700">Assistência 24 hs Auto: <a className="cl-blue f-weight-400" href="tel:08009402121">0800 940 2121</a> | <a className="cl-blue f-weight-400" href="tel:08009402122">0800 940 2122</a> </p>
+                                    <p className="cl-black f-weight-700">Assistência 24 hs Saúde: <a className="cl-blue f-weight-400" href="tel:08006002853">0800 600 2853</a></p>
+                                    <p className="cl-black f-weight-700">Furto e roubo 24h: <a className="cl-blue f-weight-400" href="tel:08007614418">0800 761 4418</a> </p>
                                 </BrowserView>
 
                                 <MobileView>
-                                    <p className="cl-black f-weight-700">Central de vendas: <a className="cl-blue f-weight-400" href="tel:40035542">4003 5542 </a></p>
+                                    <p className="cl-black f-weight-700">Central de Cotação / Adesão: <a className="cl-blue f-weight-400" href="tel:40035542">4003 5542 </a></p>
                                     <p className="cl-black f-weight-700">Atendimento ao Associado: <a className="cl-blue f-weight-400" href="tel:40035548">4003 5548 </a></p>
-                                    <p className="cl-black f-weight-700">Assistência 24h: <a className="cl-blue f-weight-400" href="tel:08009402121">0800 940 2121</a></p>
+                                    <p className="cl-black f-weight-700">Assistência 24 hs Auto: <a className="cl-blue f-weight-400" href="tel:08009402121">0800 940 2121</a> <a className="cl-blue f-weight-400" href="tel:08009402122">0800 940 2122</a></p>
+                                    <p className="cl-black f-weight-700">Assistência 24 hs Saúde: <a className="cl-blue f-weight-400" href="tel:08006002853">0800 600 2853</a></p>
                                     <p className="cl-black f-weight-700"> Furto e roubo 24h: <a className="cl-blue f-weight-400" href="tel:08007614418">0800 761 4418 </a></p>
                                 </MobileView>
                             </div>
@@ -141,8 +161,8 @@ export default function Footer(){
                 <BrowserView>
                     <div className="buttons">
                         <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
-                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
-                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Saúde</Link>
+                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Residência</Link>
                         <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
                         <Link to="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</Link>
                     </div>
@@ -150,12 +170,26 @@ export default function Footer(){
                 <MobileView>
                     <div className="buttons">
                         <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
-                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
-                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
+                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Saúde</a>
+                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Residência</a>
                         <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
                         <a href="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</a>
                     </div>
                 </MobileView>
+            </div>
+
+            <div id="line-garante">
+                <div className="content">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="box-2">
+                                <img src={Heart} />
+                                <span className="cl-blue font-28 f-weight-700">Entenda como a Super<br /> garante seus benefícios</span>
+                                <Link to="/super-garante" className="cl-blue border-blue bt">Saiba mais</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Modal>
 
@@ -187,6 +221,19 @@ export default function Footer(){
                 </div>
             </div>
         </Modal>
+
+        <div id="modallgpd" className={activeLGPD}>
+            <div>
+                <div id="modal-ini">
+                        <img src={Cookies} />
+                        <p>
+                            Usamos cookies para personalizar e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <Link to="/politica-de-privacidade">Política de Cookies e privacidade.</Link>
+                        </p>
+                        <button onClick={(e) => window.localStorage.setItem('LGPD', false) & setActiveLGPD(false)} className="fechar">Continuar e fechar</button>
+                </div>
+            </div>
+        </div>
+
 
         </footer>
 

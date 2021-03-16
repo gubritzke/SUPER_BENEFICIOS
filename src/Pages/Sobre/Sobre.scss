@@ -62,6 +62,108 @@
     }
 }
 
+#supergarantesobre{
+    margin-top: 60px;
+    .title{
+        display: flex;
+        p{
+            margin-left: 25px;
+        }
+    }
+    .title:before{
+        content: "";
+        width: 72px;
+        height: 6px;
+        background: #006CBF;
+        border-radius: 8px;
+        position: absolute;
+        left: 6px;
+        bottom: -15px;
+    }
+    .text,
+    .image{
+        display: flex;
+        align-items: center;
+    }
+    .mg-top-sobre{
+        margin-top: 45px;
+    }
+    a{
+        display: inline-block;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    a:hover{
+        color: $color_blue;
+    }
+}
+
+
+#faq-list{
+    .title{
+        margin-top: 95px;
+        margin-bottom: 30px;
+    }
+    .faq-row{
+        border: none;
+        .row-title{
+            width: 100%;
+            display: block;
+            padding: 10px 20px 10px 20px;
+            border-radius: 100px;
+            border: 2px solid $color_blue;
+            color: $color_blue;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .row-content-text{
+            color: #68646c;
+            padding: 15px 21px 15px 21px;
+        }
+    }
+    p{
+        padding: 15px 15px;
+    }
+} 
+
+.styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-title__1YiiY .styles_icon-wrapper__2cftw{
+    max-width: none !important;
+    max-height: none !important;
+}
+
+#garante{
+    #banner{
+        .title{
+            margin-top: 40px;
+            margin-bottom: 35px;
+            img{
+                margin-right: 25px;
+            }
+            
+        }
+        a{
+            display: inline-block;
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+        a:hover{
+            color: $color_blue;
+        }
+    }
+    #video{
+        margin-top: 80px;
+        background: #E5F2FF;
+        height: 428px;
+        iframe{
+            width: 898px;
+            height: 506px;
+            display: block;
+            margin: -39px auto 0 auto;
+        }
+    }
+}
+
 @media screen and (max-width: 750px){
     #sobre{
         #banner{
@@ -85,6 +187,25 @@
                     }
                 }
             }
+        }
+    }
+    #garante{
+        #video{
+            iframe {
+                width: 650px;
+            }
+        }
+        #banner{
+            > img{
+                left: -808px;
+                display: none;
+            }
+        }
+        .styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-title__1YiiY .styles_row-title-text__1MuhU {
+            font-size: 20px;
+        }
+        #faq-list .faq-row .row-content-text {
+            font-size: 20px;
         }
     }
 }

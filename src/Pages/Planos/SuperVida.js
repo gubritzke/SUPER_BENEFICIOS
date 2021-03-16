@@ -42,6 +42,8 @@ import bgNaoYellow from '../../images/nao-pedimos/bg-yellow.svg'
 import bgNaoYellowM from '../../images/nao-pedimos/bg-yellowM.svg'
 import bgImage from '../../images/sobre/image-analise.png'
 
+import Heart from '../../images/icon/coracao-garante.svg'
+
 import icon1 from '../../images/planos/super-vida/icon1.svg'
 import icon2 from '../../images/planos/super-vida/icon2.svg'
 import icon3 from '../../images/planos/super-vida/icon3.svg'
@@ -83,6 +85,38 @@ export default function Index() {
                         </div>
                     </div> 
                 </div>
+            </div>
+
+            <div id="banner-novo" className="def-height">
+                <div className="content">
+                    <div className="row line-full no-gutters">
+                        <div className="novidade">
+                            <span>Novidade!</span>
+                        </div>
+                        <div className="col-lg-3 col-md-12 titles-saude">
+                            <span className="cl-white f-weight-700 font-35 dp-bl">SUPER</span>
+                            <span className="cl-white f-weight-300 font-35 dp-bl">Saúde Start</span>
+                        </div>
+                        <div className="col-lg-6 col-md-12 texts">
+                            <p className="cl-blue font-16">
+                                <BrowserView>
+                                    <span className="cl-gray"><img src={BulletMais1} />Rede completa com <b>descontos em consultas, exames, vacinas e mais</b></span>
+                                    <span className="cl-gray"><img src={BulletMais1} /><b>Vídeoconsulta com médico</b> 24 horas por dia, 7 dias na semana</span>
+                                </BrowserView>
+                                <MobileView>
+                                    <span className="cl-gray"><img src={BulletMais1} />Rede completa com <b>descontos em consultas, exames, vacinas e mais</b></span>
+                                    <span className="cl-gray"><img src={BulletMais1} /><b>Vídeoconsulta com médico</b> 24 horas por dia, 7 dias na semana</span>
+                                </MobileView>
+                            </p>
+                        </div>
+                        <div className="col-lg-3  col-md-12 valor">
+                            <span className="cl-gray font-16 font-p-mobal1 dp-bl">Por apenas</span>
+                            <span className="cl-blue font-32 f-weight-700 font-p-mobal dp-bl">R$ 23,90<span className="cl-gray font-16 f-weight-400">/mensais</span></span>
+                            <Link to="form-saude" className="bt f-wheight-600 cl-white font-18">Cotação Online <img src={ArrowYellow} /></Link>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         <div id="planos">
@@ -380,7 +414,7 @@ export default function Index() {
                                         <img src={ImageLink1} />
                                     </div>
                                     <div className="col-lg-6 col-md-12">
-                                        <span className="cl-gray font-40">Super <span className="cl-blue f-weight-700"> Casa</span></span>
+                                        <span className="cl-gray font-40">Super <span className="cl-blue f-weight-700"> Residência</span></span>
                                         <p className="cl-gray font-18">Seu lar merece segurança <br /><b> e muitas vantagens!</b></p>
                                         <Link to="form-casa" className="cl-white bg-light-blue font-18 bt">Saiba mais <img src={ArrowYellow} /></Link>
                                     </div>
@@ -476,8 +510,8 @@ export default function Index() {
                 <BrowserView>
                     <div className="buttons">
                         <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
-                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
-                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Saúde</Link>
+                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Residência</Link>
                         <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
                         <Link to="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</Link>
                     </div>
@@ -485,12 +519,26 @@ export default function Index() {
                 <MobileView>
                     <div className="buttons">
                         <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
-                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
-                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
+                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Saúde</a>
+                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Residência</a>
                         <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
                         <a href="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</a>
                     </div>
                 </MobileView>
+            </div>
+
+            <div id="line-garante">
+                <div className="content">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="box-2">
+                                <img src={Heart} />
+                                <span className="cl-blue font-28 f-weight-700">Entenda como a Super<br /> garante seus benefícios</span>
+                                <Link to="/super-garante" className="cl-blue border-blue bt">Saiba mais</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Modal>
         </div>

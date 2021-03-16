@@ -37,6 +37,8 @@ import ModalImage from '../../images/modal/image-modal.png'
 import { BrowserView, MobileView } from 'react-device-detect';
 import bgNaoGreenMobile from '../../images/nao-pedimos/bg-mobile1.svg'
 
+import Heart from '../../images/icon/coracao-garante.svg'
+
 export default function Index() {
 
     const [modalActive, setModalActive] = useState(false);
@@ -177,22 +179,39 @@ export default function Index() {
                 <img src={ModalImage} />
                 <BrowserView>
                     <div className="buttons">
-                        <Link to="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</Link>
-                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
-                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                        <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
+                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Saúde</Link>
+                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Residência</Link>
                         <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
+                        <Link to="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</Link>
                     </div>
                 </BrowserView>
                 <MobileView>
                     <div className="buttons">
                         <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
-                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
-                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
+                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Saúde</a>
+                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Residência</a>
                         <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
+                        <a href="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</a>
                     </div>
                 </MobileView>
             </div>
+
+            <div id="line-garante">
+                <div className="content">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="box-2">
+                                <img src={Heart} />
+                                <span className="cl-blue font-28 f-weight-700">Entenda como a Super<br /> garante seus benefícios</span>
+                                <Link to="/super-garante" className="cl-blue border-blue bt">Saiba mais</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Modal>
+
         </div>
     );
 }

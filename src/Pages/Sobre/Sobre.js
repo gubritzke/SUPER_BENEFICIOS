@@ -24,6 +24,9 @@ import bgImage from '../../images/sobre/image-analise.png'
 
 import ModalImage from '../../images/modal/image-modal.png'
 
+import Heart from '../../images/icon/coracao-garante.svg'
+import ImageGarante from '../../images/sobre/image-garante.png'
+
 export default function Index() {
 
     const [modalFtActive, setModalFtActive] = useState(false);
@@ -61,6 +64,35 @@ export default function Index() {
                             <img className="imgmap animated fadeInRight" src={Map} />
                         </div>
                         </BrowserView>
+                    </div>
+                </div>
+            </div>
+
+            <div id="supergarantesobre">
+                <div className="content">
+                    <div className="row">
+                        <div className="col-12 title">
+                            <img src={Heart} />
+                            <p className="font-28 cl-blue f-weight-700">Entenda como a Super garante seus benefícios</p>
+                        </div>
+                    </div>
+                    <div className="row mg-top-sobre">
+                        <div className="col-2 image mb-none">
+                            <img src={ImageGarante} />
+                        </div>
+                        <div className="col-md-12 col-lg-10 text">
+                            <p className="cl-gray font-16  ">
+                                <b>A SUPER BENEFÍCIOS faz parte da AAAPV, e isso traz segurança pra você e credibilidade e solidez para que possamos oferecer os mais diversos benefícios e trazer mais qualidade de vida aos associados.</b>
+                                <br /><br />
+                                <b>O Fundo Garantidor contra Riscos Sistêmicos</b> (FGRS) é uma iniciativa da AAAPV (Agência de Autorregulamentação das Entidades de Autogestão de Planos de Proteção Contra Riscos Patrimoniais) para consolidar ainda mais a atuação das mútuas no segmento de proteção patrimonial em nosso país. Com a missão de amparar o associado/cooperado no caso de insolvência de alguma mútua filiada. 
+                                <br /><br />
+                                A Super Benefícios, como filiada é acompanhada e auditada com frequência pela AAAPV. Seguimos regras de compliance e de gestão estabelecidas por ela e pelo FGRS e assim mantemos nosso selo. Com monitoramento frequente e participamos de orientações para detectar riscos de insolvência. Todavia, caso ocorra, o FGRS cobrirá, dentro dos limites estabelecidos no regulamento do fundo, os eventos que estiverem abertos, sejam eles de perda parcial, total ou roubo/furto.
+                            </p>
+                        </div>
+
+                        <div className="col-12" align="center">
+                            <a href="https://fgrs.com.br" target="_blank" className="cl-blue bt border-blue font-16"><b>Acesse o site da AAAPV</b></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,8 +170,8 @@ export default function Index() {
                 <BrowserView>
                     <div className="buttons">
                         <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
-                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</Link>
-                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</Link>
+                        <Link to="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Saúde</Link>
+                        <Link to="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Residência</Link>
                         <Link to="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</Link>
                         <Link to="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</Link>
                     </div>
@@ -147,12 +179,26 @@ export default function Index() {
                 <MobileView>
                     <div className="buttons">
                         <a href="/form-auto" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Auto</a>
-                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Vida</a>
-                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Casa</a>
+                        <a href="/form-saude" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Saúde</a>
+                        <a href="/form-casa" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Residência</a>
                         <a href="/form-pet" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Pet</a>
                         <a href="/form-dental" onClick={(e) => setModalFtActive(false)} className="font-16 cl-white border-white bt">Super Odonto</a>
                     </div>
                 </MobileView>
+            </div>
+
+            <div id="line-garante">
+                <div className="content">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="box-2">
+                                <img src={Heart} />
+                                <span className="cl-blue font-28 f-weight-700">Entenda como a Super<br /> garante seus benefícios</span>
+                                <Link to="/super-garante" className="cl-blue border-blue bt">Saiba mais</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Modal>
         </div>

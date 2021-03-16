@@ -49,7 +49,7 @@ export default function Index() {
                 <div id="menu">
                     <div className="content">
                         <div className="line-menu">
-                            <Link to="/politica-de-privacidade" className="bt border-white cl-white font-16">Política de privacidade</Link>
+                            <Link to="/politica-de-privacidade" className="bt border-white cl-white font-16">Política de privacidade e Cookies</Link>
                             <Link to="/como-usamos-seus-dados" className="bt border-white cl-white font-16">Como usamos seus dados?</Link>
                         </div>
                     </div>
@@ -58,7 +58,7 @@ export default function Index() {
                     <div className="content">
                         <br /><br />
                         <span className="cl-blue font-32 font-weight-400 titles">Nossa</span>
-                        <h2 className="cl-blue font-32 font-weight-800 titles">Política de Privacidade</h2>
+                        <h2 className="cl-blue font-32 font-weight-800 titles">Política de Privacidade e Cookies</h2>
                         <br /><br />
                         <p className="font-18 cl-gray font-weight-500">
 

@@ -7,6 +7,7 @@ import Layout from "./Components/Layout/Layout";
 
 import Index from './Pages/Index/Index';
 import Sobre from './Pages/Sobre/Sobre';
+import SobreGarante from './Pages/Sobre/SuperGarante';
 import Credenciados from './Pages/Credenciados/Credenciados';
 import SuperAuto from './Pages/Planos/SuperAuto'
 import SuperSaude from './Pages/Planos/SuperVida'
@@ -32,6 +33,7 @@ export default function Routes(){
                     <Layout>
                         <Route path="/" exact component={Index} />
                         <Route path="/sobre" exact component={Sobre} />
+                        <Route path="/super-garante" exact component={SobreGarante} />
                         <Route path="/credenciados" exact component={Credenciados} />
                         <Route path="/super-auto" exact component={SuperAuto} />
                         <Route path="/super-vida" exact component={SuperSaude} />

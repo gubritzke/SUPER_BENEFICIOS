@@ -366,9 +366,230 @@
         }
     }
 }
+#banner-novo{
+    text-align: center;
+    margin-top: 35px;
+    &.def-height .line-full{
+        height: 161px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 1px solid #73E4EC;
+        .titles-saude{
+            line-height: 37px;
+            background: #73E4EC;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            font-style: italic;
+        }
+        .texts{
+            display: flex;
+            flex-direction: column;
+            span{
+                width: 100%;
+                display: block;
+                margin-bottom: 5px;
+                img{
+                    margin-right: 10px;
+                }
+            }
+        }
+        .valor{
+            a{
+                background: #73E4EC;
+            }
+        }
 
+    }
+    .hover-ajuste:hover{
+        color: #000;
+    }
+    .dp-bl{
+        display: block;
+    }
+    .line-bg{
+        background: #D3E9FF;
+    }
+    .line-full{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 30px 0;
+    }
+    .titles{
+        line-height: 37px;
+    }
+    .valor{
+        a{
+            margin-top: 10px;
+            display: inline-block;
+        }
+    }
+    .novidade{
+        position: absolute;
+        width: 211px;
+        background: #FFFE06;
+        border-radius: 32px;
+        top: -15px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+#line-garante{
+    margin-top: 35px;
+    .box{
+        background: #FFFE06;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 0;
+        span{
+            margin: 0 15px;
+        }
+        a:hover{
+            color: #fff;
+            background: $color_blue;
+        }
+    }
+    .box-2{
+        background: #FFFE06;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 07px 0;
+        span{
+            margin: 0 25px;
+        }
+        a:hover{
+            color: #fff;
+            background: $color_blue;
+        }
+    }
+}
 
 @media screen and (max-width: 750px){
+
+    #line-garante{
+        .content{
+            width: 100%;
+        }
+        .box {
+            background: #FFFE06;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 0;
+            flex-direction: column;
+            text-align: center;
+            span{
+                margin: 15px 0;
+            }
+            a{
+                font-size: 27px;
+                font-weight: 600;
+            }
+        }
+
+        .box-2 {
+            background: #FFFE06;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 0;
+            flex-direction: column;
+            text-align: center;
+            span{
+                margin: 15px 0;
+            }
+            a{
+                font-size: 27px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    #banner-novo{
+        &.def-height .line-full{
+            height: auto;
+            .novidade{
+                z-index: 2;
+            }
+            .titles-saude{
+                padding: 55px 0 25px 0;
+                span{
+                    font-size: 55px;
+                    margin-bottom: 10px;
+                }
+            }
+            p{
+                margin-top: 20px;
+            }
+            .font-p-mobal1 {
+                margin-top: 15px;
+            }
+            a{
+                margin-bottom: 35px;
+                img{
+                    width: 45px;
+                }
+            }
+        }
+        .titles{
+            line-height: 37px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            span{
+                font-size: 50px;
+                line-height: 50px;
+            }
+        }
+        p{
+            font-size: 35px;
+        }
+        .valor{
+            a{
+                margin-top: 10px;
+                display: inline-block;
+                font-size: 40px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                padding: 12px 35px;
+            }
+            .font-p-mobal1{
+                font-size: 35px;
+                margin-top: 35px;
+            }
+            .font-p-mobal{
+                font-size: 50px;
+                span{
+                    font-size: 40px;
+                }
+            }
+        }
+        .novidade{
+            position: absolute;
+            width: 260px;
+            background: #FFFE06;
+            border-radius: 32px;
+            top: -15px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+    }
+
     #super-auto{
         #banner{
             > img{
