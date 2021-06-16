@@ -61,14 +61,12 @@ export default function Index() {
             if  ( response.data.error == true){
                 alert( response.data.message )
             }  else {
-                swal("Enviado com sucesso!");
+                swal("A Super Benefícios agradece o interesse. Por favor, envie seu currículo para o e-mail: rh@superbeneficios.com.");
             }
 
             setTimeout(function(){
                 setstepLoad(false)
             })
-
-        console.log( response )
 
     }
 

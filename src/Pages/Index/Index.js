@@ -209,7 +209,7 @@ export default function Index() {
                             </ScrollAnimation>
 
                             <ScrollAnimation className="col-lg-4 col-md-12" animateIn='fadeIn'>
-                                <a href="/form-saude" className="box">
+                                <a href="/super-vida" className="box">
                                     <img src={Prod6}></img>
                                     <span className="produto cl-gray font-28">Super <span className="cl-blue font-28">Saúde</span></span>
                                     <span className="cl-gray font-16 font-p-mobal1">Planos a partir de</span>
